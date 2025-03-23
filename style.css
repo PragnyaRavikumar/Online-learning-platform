@@ -1,5 +1,86 @@
 /* HOMEPAGE STYLING */
 
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Logo Styling */
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Login & Sign-up Buttons */
+#b1, #b2 {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 0px;
+    cursor: pointer;
+    position: relative;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+#b1:hover, #b2:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Horizontal Line */
+hr {
+    border: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+}
 
 
 
