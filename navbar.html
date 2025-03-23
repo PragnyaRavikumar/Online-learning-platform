@@ -1,11 +1,38 @@
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="coursePage.html">Courses</a></li>  
-            <li><a href="about.html">About us</a></li>
-            <li><a href="pages.html">Pages</a></li>
-            <!-- Add more links as needed -->
-        </ul>
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img src="Rsc-Img.png" alt="RSCSys Logo">
+            </div>
+            <div class="auth-buttons">
+                <button id="signup-btn">Sign Up</button>
+                <button id="login-btn">Login</button>
+            </div>
+        </div>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coursePage.html">Courses</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="pages.html">Pages</a></li>
+            </ul>
+            <div class="search-bar">
+                <form id="search-form">
+                    <span class="search-icon">Q</span> <!-- Add the "Q" symbol inside the input box -->
+                    <input type="text" name="query" id="search-input" placeholder="Search..." required>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>

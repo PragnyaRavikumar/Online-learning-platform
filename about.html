@@ -3,22 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <img src="Rsc-Img.png" alt="RSCSys Logo" width="270px">
-    <button id="b1">Login</button> <span>/</span> <button id="b2">Sign Up</button>
-    <hr>
-
     <!-- Navbar will be loaded here -->
     <div id="navbar"></div>
-
-<script>
-    fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-    });
-</script>
+    <script src="script.js"></script>
+       
 </body>
 </html>

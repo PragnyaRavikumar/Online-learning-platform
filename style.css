@@ -15,75 +15,146 @@ body {
     padding: 20px;
 }
 
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd; /* Optional: Add a subtle border below the navbar */
+}
+
 /* Logo Styling */
-img {
+.logo-container img {
     display: block;
-    margin: 0 auto;
+    max-width: 270px; /* Increase the maximum width */
+    height: auto;
+    max-width: 100%; /* Ensure the image scales responsively */
+    width: 200px; /* Increase the width to make the image larger */
 }
 
 /* Login & Sign-up Buttons */
-#b1, #b2 {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 8px 15px;
-    margin: 5px;
-    font-size: 16px;
-    border-radius: 0px;
-    cursor: pointer;
-    position: relative;
-    margin: 20px auto;
-    display: inline-block;
+.auth-buttons {
+    display: flex;
+    gap: 10px;
 }
 
-#b1:hover, #b2:hover {
-    background-color: #0056b3;
+.auth-buttons button {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #f9f5f5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #faf5f5;
+    color: blue;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
+    background-color: #f8f9fa;
     padding: 10px 0;
+    justify-content: flex-start;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 20px; /* Add spacing between list items */
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 15px;
+    padding: 8px 12px; /* Add padding for clickable area */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
 }
 
 nav ul li a:hover {
-    background-color: #555;
     border-radius: 5px;
+    color: blue;
+    background-color: #f9f6f6; /* Optional: Add a subtle background on hover */
 }
 
 /* Horizontal Line */
 hr {
     border: 1px solid #ddd;
-    margin: 15px 0;
+    margin: 0; /* Remove all margins */
+}
+ 
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search bar to the right */
+    margin-right: 60px; /* Add some space on the right */
+    justify-content: flex-end; /* Ensure it aligns to the far right */
+}
+.search-bar button {
+    padding: 5px 10px; /* Reduce padding to make the button smaller */
+    font-size: 14px; /* Decrease font size */
+    border-radius: 3px; /* Slightly round the corners */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
+.search-bar button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+.search-bar form {
+    position: absolute; /* Position the form relative to allow absolute positioning of the icon */
+    display: flex;
+    align-items: center;
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    left: 10px; /* Position the icon inside the input field */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for perfect vertical alignment */
+    font-size: 18px; /* Adjust the size of the icon */
+    color: #030303; /* Set the color of the icon */
+    pointer-events: none; /* Prevent the icon from interfering with input clicks */
+}
+
+.search-bar input[type="text"] {
+    width: 350px; /* Adjust the width of the input field */
+    padding: 8px 12px 8px 30px; /* Add left padding to make space for the icon */
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-radius: 5px; /* Round the corners */
+    font-size: 16px; /* Set a readable font size */
+    outline: none; /* Remove the default outline */
+    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle glow effect */
+}
 /* Footer */
 footer {
     margin-top: 20px;
     padding: 10px;
-    background-color: #222;
+    background-color: #504f4f;
     color: white;
+    text-align: center;
 }
-
-
-
-
-
-/* COURSEPAGE STYLING */
