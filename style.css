@@ -218,7 +218,12 @@ hr {
     border-radius: 5px; /* Optional: Round the corners */
     flex-direction: row; /* Ensure the content flows in a row */
 }
-
+.start-section .text-container p {
+    text-align: justify; /* Justify the text content */
+    font-size: 16px; /* Optional: Adjust font size */
+    line-height: 1.8; /* Optional: Adjust line height for better readability */
+    color: #333; /* Optional: Set text color */
+}
 .start-section .text {
     flex: 1;
     text-align: left; /* Align the paragraph to the left */
@@ -256,6 +261,46 @@ hr {
 .start-section .text-container a button:hover {
     background-color: #65b6ac; /* Darker shade on hover */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+.why-container h1 {
+    position: relative; /* Allow precise positioning */
+    top: -80px; /* Move the heading up */
+    margin-bottom: 10px; /* Optional: Adjust spacing below the heading */
+    text-align: center; /* Center the heading horizontally */
+    font-size: 50px; /* Adjust the font size */
+    color: #333; /* Optional: Set the text color */
+}
+.why-container {
+    padding: 40px 20px; /* Add padding to increase the height of the container */
+    background-color: #becfc4; /* Optional: Add a background color for better visibility */
+    display: flex;
+    flex-direction: row; /* Arrange image and text side by side */
+    justify-content: space-between; /* Add space between the image and text */
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Add spacing between the image and text */
+}
+
+.why-container .image-left {
+    flex: 1; /* Divide the container into equal halves */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.why-container .image-left img {
+    max-width: 100%; /* Ensure the image scales responsively */
+    width: 100%; /* Make the image take up the full width of its container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px; /* Optional: Round the image corners */
+}
+
+.why-container .text {
+    flex: 1; /* Divide the container into equal halves */
+    text-align: justify; /* Align the text to the left */
+    font-size: 18px; /* Set a readable font size */
+    line-height: 1.6; /* Adjust line height for better readability */
+    color: #333; /* Optional: Set text color */
+    padding: 20px; /* Add padding for spacing inside the text container */
 }
 
 /* Footer */
