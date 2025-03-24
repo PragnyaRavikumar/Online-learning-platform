@@ -40,7 +40,6 @@ body {
     gap: 10px;
 }
 
-<<<<<<< HEAD
 /* COURSEPAGE STYLING */
 
 body {
@@ -96,7 +95,6 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-=======
 .auth-buttons button {
     font-family: Arial, sans-serif;
     font-size: 1rem;
@@ -215,4 +213,3 @@ footer {
     color: white;
     text-align: center;
 }
->>>>>>> 213d26901aadaeb4752d90479d47f398a6625506
