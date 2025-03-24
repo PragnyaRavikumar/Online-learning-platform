@@ -271,7 +271,7 @@ hr {
     color: #333; /* Optional: Set the text color */
 }
 .why-container {
-    padding: 40px 20px; /* Add padding to increase the height of the container */
+    padding: 10px 10px; /* Add padding to increase the height of the container */
     background-color: #becfc4; /* Optional: Add a background color for better visibility */
     display: flex;
     flex-direction: row; /* Arrange image and text side by side */
