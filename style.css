@@ -357,6 +357,113 @@ h2 {
     color: #555;
 }
 
+.popular-courses {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.popular-courses h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Reduce padding */
+    text-align: center;
+    max-width: 350px; /* Limit the card width */
+    height: auto; /* Adjust height automatically */
+}
+
+.course-card img {
+    width: 100%;
+    max-width: 150px; /* Reduce the image size */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Reduce spacing below the image */
+}
+
+.course-card h3 {
+    font-size: 16px; /* Reduce the font size */
+    font-weight: bold;
+    margin-bottom: 8px; /* Reduce spacing below the title */
+    color: #333;
+}
+.start-learning-button {
+    text-decoration: none;
+    color: #2c8920;
+    background-color: #ffffff; /* Optional: Add a background color */
+    padding: 10px 20px;
+    border-radius: 5px; /* Round the corners */
+    border: 1px solid #2c8920; /* Optional: Add a border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.start-learning-button:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+    background-color: #2c8920; /* Optional: Change background color on hover */
+    color: #ffffff; /* Optional: Change text color on hover */
+}
+.course-card p {
+    font-size: 12px; /* Reduce the font size */
+    color: #555;
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #237a49;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #357b37;
+    color: #fff;
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+    position: relative;
+    margin-top: 15px; /* Adjust spacing above the pagination */
+}
+
+.swiper-pagination-bullet {
+    width: 10px; /* Adjust bullet size */
+    height: 10px;
+    background-color: #237a49; /* Set default bullet color */
+    opacity: 0.5;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #357b37; /* Highlight active bullet */
+    opacity: 1;
+    transform: scale(1.2); /* Slightly enlarge active bullet */
+}
 
 /* Footer */
 footer {
