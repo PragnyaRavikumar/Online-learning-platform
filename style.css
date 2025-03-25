@@ -301,15 +301,41 @@ h2 {
     font-size: 14px;
     color: #555;
 }
+.popular-courses .section-header {
+    display: flex;
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: center; /* Vertically center the content */
+    margin-bottom: 20px;
+}
 
+.popular-courses .section-header h2 {
+    flex: 1;
+    font-size: 40px;
+    color: #000000;
+    margin: 0; /* Remove extra margin */
+    text-align: center;
+}
+
+.popular-courses .section-header .see-more {
+    text-decoration: none;
+    color: #2c8920;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.popular-courses .section-header .see-more:hover {
+    color: #357b37; /* Change color on hover */
+}
 .popular-courses {
     padding: 50px 20px;
     background-color: #e0f5e9;
     text-align: center;
+    font-size: large;
 }
 
 .popular-courses h2 {
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 20px;
     color: #369f57;
 }
@@ -409,6 +435,141 @@ h2 {
     opacity: 1;
     transform: scale(1.2); /* Slightly enlarge active bullet */
 }
+/* Instructor Section */
+.instructor-section {
+    background-color: #f0f0f5;
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Flexbox for Layout */
+.instructor-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Image Styling */
+.image-container {
+    flex: 1; /* Takes 50% width */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    width: 600px; /* Adjust the size */
+}
+
+/* Text Section */
+.text-container {
+    flex: 1; /* Takes 50% width */
+    padding-left: 50px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #222;
+}
+
+.highlight {
+    color: #319e35;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #319944;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #44a862;
+}
+.categories-section {
+    padding: 50px 20px; /* Add consistent padding */
+    max-width: 1200px; /* Limit the width to align with other sections */
+    margin: 0 auto; /* Center the section horizontally */
+    background-color: rgb(251, 246, 246); /* Keep the background color */
+    text-align: center; /* Center-align the content */
+}
+
+.categories-section .header {
+    display: flex;
+    justify-content: space-between; /* Align heading and "See More" link */
+    align-items: center; /* Vertically center the content */
+    margin-bottom: 20px;
+}
+
+.categories-section .header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(13, 13, 13); /* Ensure the text is visible on the green background */
+    margin: 0;
+    flex: 1; /* Allow the heading to take up space */
+    text-align: left; /* Align the heading to the left */
+}
+
+.categories-section .header .see-more {
+    text-decoration: none;
+    color: #38991f; /* Ensure the link is visible on the green background */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.categories-section .header .see-more:hover {
+    text-decoration: underline;
+    color: #ddd; /* Change color on hover */
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between; /* Space out the category cards */
+    gap: 20px; /* Add spacing between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.category-card {
+    background-color: #e8e9ed;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* Three cards per row with spacing */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    background-color: #e6e8eb;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.category-card p {
+    font-size: 14px;
+    color: #555;
+}
+
 
 /* Footer */
 footer {

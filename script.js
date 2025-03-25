@@ -53,3 +53,11 @@ var swiper = new Swiper(".mySwiper", {
         },
     },
 });
+
+function handleClick() {
+    window.location.href = "coursePage.html"; // Replace with your actual link
+}
+// Handle Category Click
+function handleCategoryClick(categoryName) {
+    alert("Redirecting to " + categoryName + " courses...");
+}
