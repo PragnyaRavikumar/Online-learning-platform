@@ -55,9 +55,23 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 function handleClick() {
-    window.location.href = "coursePage.html"; // Replace with your actual link
+    window.location.href = "teachCourse.html"; // Replace with your actual link
 }
-// Handle Category Click
-function handleCategoryClick(categoryName) {
-    alert("Redirecting to " + categoryName + " courses...");
-}
+// Handle category card clicks
+document.addEventListener("DOMContentLoaded", function () {
+    const categoryCards = document.querySelectorAll(".category-card");
+
+    categoryCards.forEach((card, index) => {
+        card.addEventListener("click", function () {
+            // Redirect to a specific page based on the category
+            if (index === 0) {
+                window.location.href = "classXI.html"; // Replace with the actual link for Class XI
+            } else if (index === 1) {
+                window.location.href = "classXII.html"; // Replace with the actual link for Class XII
+            } else {
+                console.log("No page assigned for this category.");
+            }
+        });
+    });
+});
+
