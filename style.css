@@ -290,13 +290,6 @@ hr {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle glow effect */
 }
 /* Footer */
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #504f4f;
-    color: white;
-    text-align: center;
-}
 .reset-button {
     background-color: #ff5733;
     color: white;
@@ -326,3 +319,73 @@ footer {
     outline: none; /* Prevents blue outline */
     box-shadow: none; /* Prevents extra styling */
 }
+.footer {
+    background-color: #013220;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h3, .footer-section h1 {
+    color: #8A9A5B;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #BCB88A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+

@@ -45,11 +45,11 @@
         
 
         <section class="courses">
-            <div class="course-card" data-class="XI" data-author="Yashaswi" data-price="Free" data-rating="0" data-category="Class XI">
+            <div class="course-card" data-class="XI" data-author="Yashaswi" data-price="Free" data-rating="2" data-category="Class XI">
                 <div class="class-badge1">Class XI</div>
                 <img src="course1.jpg" alt="Course Image">
                 <div class="course-info">
-                    <h2>New Course</h2>
+                    <h2>Node.js</h2>
                     <p><strong>Yashaswi</strong></p>
                     <p>1 Lesson</p>
                     <p>Free</p>
@@ -57,7 +57,7 @@
                 </div>
             </div>
             
-            <div class="course-card" data-class="XI" data-author="Chandan C" data-price="Free" data-rating="0" data-category="Class XI">
+            <div class="course-card" data-class="XI" data-author="Chandan C" data-price="Free" data-rating="3" data-category="Class XI">
                 <img src="course2.jpg" alt="Course Image">
                 <div class="course-info">
                     <div class="class-badge1">Class XI</div>
@@ -81,7 +81,7 @@
                 </div>
             </div>
             
-            <div class="course-card" data-class="XII" data-author="Sreekantha" data-price="Free" data-rating="0" data-category="Class XII">
+            <div class="course-card" data-class="XII" data-author="Sreekantha" data-price="Free" data-rating="1" data-category="Class XII">
                 <img src="course3.jpeg" alt="Course Image">
                 <div class="course-info">
                     <div class="class-badge2">Class XII</div>
@@ -105,7 +105,7 @@
                 </div>
             </div>
             
-            <div class="course-card" data-class="XI" data-author="Chidananda" data-price="Free" data-rating="0" data-category="Class XI">
+            <div class="course-card" data-class="XI" data-author="Chidananda" data-price="Free" data-rating="4" data-category="Class XI">
                 <img src="course6.jpg" alt="Course Image">
                 <div class="course-info">
                     <div class="class-badge1">Class XI</div>
@@ -117,7 +117,7 @@
                 </div>
             </div>
             
-            <div class="course-card" data-class="XI" data-author="Chidananda-XI" data-price="Free" data-rating="0" data-category="Class XI">
+            <div class="course-card" data-class="XI" data-author="Chidananda-XI" data-price="Free" data-rating="2" data-category="Class XI">
                 <img src="course7.jpg" alt="Course Image">
                 <div class="course-info">
                     <div class="class-badge1">Class XI</div>
@@ -146,5 +146,12 @@
     </main>
 
     <script src="script.js"></script>
+    <div id="footer-container"></div>
+<script>
+    fetch("footer.html")
+    .then(response => response.text())
+    .then(data => document.getElementById("footer-container").innerHTML = data);
+</script>
+
 </body>
 </html>
