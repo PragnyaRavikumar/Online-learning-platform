@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teach a Course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Main Content -->
+    <main>
+        <br><br>
+        <section class="teach-course-page">
+            <h1>Ready to Teach a Course?</h1>
+            <p>
+                There are millions of people out there who want to learn from creatives like you. If you love to teach and share what you know, this is a unique place to do just that. "Teaching a course involves designing and delivering structured lessons to help learners acquire specific knowledge, skills, or expertise in a particular subject. It requires planning learning objectives, creating engaging content, and using effective teaching methods to ensure understanding. By fostering interaction and providing feedback, educators inspire growth and empower students to reach their potential. Whether taught in-person or online, courses serve as a bridge for sharing knowledge and building communities of learning."
+            </p>
+            <button class="get-started-button" onclick="alert('Redirecting to course creation page...')">Get Started</button>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

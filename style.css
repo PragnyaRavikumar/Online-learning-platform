@@ -40,24 +40,722 @@ body {
     gap: 10px;
 }
 
-/* COURSEPAGE STYLING */
-
-body {
+.auth-buttons button {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #f9f5f5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-header {
-    text-align: left;
+.auth-buttons button:hover {
+    background-color: #faf5f5;
+    color: blue;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    justify-content: flex-start;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; /* Add spacing between list items */
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px; /* Add padding for clickable area */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    border-radius: 5px;
+    color: blue;
+    background-color: #f9f6f6; /* Optional: Add a subtle background on hover */
+}
+
+/* Horizontal Line */
+hr {
+    border: 1px solid #ddd;
+    margin: 0; /* Remove all margins */
+}
+ 
+/* Search Bar Styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search bar to the right */
+    margin-right: 60px; /* Add some space on the right */
+    justify-content: flex-end; /* Ensure it aligns to the far right */
+}
+.search-bar button {
+    padding: 5px 10px; /* Reduce padding to make the button smaller */
+    font-size: 14px; /* Decrease font size */
+    border-radius: 3px; /* Slightly round the corners */
+    background-color: #4ea963; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.search-bar button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+.search-bar form {
+    position: absolute; /* Position the form relative to allow absolute positioning of the icon */
+    display: flex;
+    align-items: center;
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    left: 10px; /* Position the icon inside the input field */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for perfect vertical alignment */
+    font-size: 18px; /* Adjust the size of the icon */
+    color: #030303; /* Set the color of the icon */
+    pointer-events: none; /* Prevent the icon from interfering with input clicks */
+}
+
+.search-bar input[type="text"] {
+    width: 350px; /* Adjust the width of the input field */
+    padding: 8px 12px 8px 30px; /* Add left padding to make space for the icon */
+    border: 1px solid #ffffff; /* Add a subtle border */
+    border-radius: 5px; /* Round the corners */
+    font-size: 16px; /* Set a readable font size */
+    outline: none; /* Remove the default outline */
+    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+    background-color: #cff0dc;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle glow effect */
+}
+/* Section Styling */
+.hp-start-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff; /* Optional: Add a background color */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Round the corners */
+    flex-direction: row; /* Ensure the content flows in a row */
+}
+.hp-start-section .hp-text-container p {
+    text-align: justify; /* Justify the text content */
+    font-size: 16px; /* Optional: Adjust font size */
+    line-height: 1.8; /* Optional: Adjust line height for better readability */
+    color: #333; /* Optional: Set text color */
+}
+.hp-start-section .hp-text {
+    flex: 1;
+    text-align: left; /* Align the paragraph to the left */
+    font-size: 72px;
+    line-height: 3.5; /* Increase the line height for more spacing between lines */
+    color: #333; /* Optional: Set text color */
+    margin-right: 20px; /* Add spacing between text and image */
+    padding: 20px 0; /* Add padding to increase the height of the text container */
+}
+.hp-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+    align-items: center; /* Center the image vertically */
+}
+.hp-image-container.hp-image img {
+    max-width: 100%; /* Ensure the image scales responsively */
+    width: 900px; /* Set the desired width */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the container */
+    border-radius: 5px; /* Optional: Round the image corners */
+}
+/* Styling for the View Courses button */
+.hp-start-section .hp-text-container a button {
+    background-color: #2c8920; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the corners */
+    padding: 10px 20px; /* Add padding for size */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.hp-start-section .hp-text-container a button:hover {
+    background-color: #65b6ac; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+.hp-why-container h1 {
+    position: relative; /* Allow precise positioning */
+    top: -80px; /* Move the heading up */
+    margin-bottom: 10px; /* Optional: Adjust spacing below the heading */
+    text-align: center; /* Center the heading horizontally */
+    font-size: 50px; /* Adjust the font size */
+    color: #333; /* Optional: Set the text color */
+}
+.hp-why-container {
+    padding: 10px 10px; /* Add padding to increase the height of the container */
+    background-color: #becfc4; /* Optional: Add a background color for better visibility */
+    display: flex;
+    flex-direction: row; /* Arrange image and text side by side */
+    justify-content: space-between; /* Add space between the image and text */
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Add spacing between the image and text */
+}
+
+.hp-why-container .hp-image-left {
+    flex: 1; /* Divide the container into equal halves */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.hp-why-container .hp-image-left img {
+    max-width: 100%; /* Ensure the image scales responsively */
+    width: 100%; /* Make the image take up the full width of its container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px; /* Optional: Round the image corners */
+}
+
+.hp-why-container .hp-text {
+    flex: 1; /* Divide the container into equal halves */
+    text-align: justify; /* Align the text to the left */
+    font-size: 18px; /* Set a readable font size */
+    line-height: 1.6; /* Adjust line height for better readability */
+    color: #333; /* Optional: Set text color */
+    padding: 20px; /* Add padding for spacing inside the text container */
+}
+/* Container */
+.hp-container {
+    padding: 70px 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Title Styling */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.hp-highlight {
+    color: rgb(27, 119, 50);
+    font-weight: bold;
+}
+
+/* Features Section */
+.hp-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Feature */
+.hp-feature {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+/* Image Styling */
+.hp-feature img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+/* Text Styling */
+.hp-feature h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hp-feature p {
+    font-size: 14px;
+    color: #555;
+}
+.hp-popular-courses .hp-section-header {
+    display: flex;
+    justify-content: space-between; /* Align items to the left and right */
+    align-items: center; /* Vertically center the content */
     margin-bottom: 20px;
 }
 
-main {
-    display: flex;
-    gap: 50px;
+.hp-popular-courses .hp-section-header h2 {
+    flex: 1;
+    font-size: 40px;
+    color: #000000;
+    margin: 0; /* Remove extra margin */
+    text-align: center;
 }
 
+.hp-popular-courses .hp-section-header .hp-see-more {
+    text-decoration: none;
+    color: #2c8920;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.hp-popular-courses .hp-section-header .hp-see-more:hover {
+    color: #357b37; /* Change color on hover */
+}
+.hp-popular-courses {
+    padding: 50px 20px;
+    background-color: #e0f5e9;
+    text-align: center;
+    font-size: large;
+}
+
+.hp-popular-courses h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #369f57;
+}
+
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Reduce padding */
+    text-align: center;
+    max-width: 350px; /* Limit the card width */
+    height: auto; /* Adjust height automatically */
+}
+
+.hp-course-card img {
+    width: 100%;
+    max-width: 150px; /* Reduce the image size */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Reduce spacing below the image */
+}
+
+.hp-course-card h3 {
+    font-size: 16px; /* Reduce the font size */
+    font-weight: bold;
+    margin-bottom: 8px; /* Reduce spacing below the title */
+    color: #333;
+}
+.hp-start-learning-button {
+    text-decoration: none;
+    color: #2c8920;
+    background-color: #ffffff; /* Optional: Add a background color */
+    padding: 10px 20px;
+    border-radius: 5px; /* Round the corners */
+    border: 1px solid #2c8920; /* Optional: Add a border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.hp-start-learning-button:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+    background-color: #2c8920; /* Optional: Change background color on hover */
+    color: #ffffff; /* Optional: Change text color on hover */
+}
+.hp-course-card p {
+    font-size: 12px; /* Reduce the font size */
+    color: #555;
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #237a49;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #357b37;
+    color: #fff;
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+    position: relative;
+    margin-top: 15px; /* Adjust spacing above the pagination */
+}
+
+.swiper-pagination-bullet {
+    width: 10px; /* Adjust bullet size */
+    height: 10px;
+    background-color: #237a49; /* Set default bullet color */
+    opacity: 0.5;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #357b37; /* Highlight active bullet */
+    opacity: 1;
+    transform: scale(1.2); /* Slightly enlarge active bullet */
+}
+/* Instructor Section */
+.hp-instructor-section {
+    background-color: #f0f0f5;
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Flexbox for Layout */
+.hp-instructor-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Image Styling */
+.hp-image-container {
+    flex: 1; /* Takes 50% width */
+}
+
+.hp-image-container img {
+    max-width: 100%;
+    height: auto;
+    width: 600px; /* Adjust the size */
+}
+
+/* Text Section */
+.hp-text-container {
+    flex: 1; /* Takes 50% width */
+    padding-left: 50px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #222;
+}
+
+.hp-highlight {
+    color: #319e35;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #319944;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #44a862;
+}
+.hp-categories-section {
+    padding: 50px 20px; /* Add consistent padding */
+    max-width: 1200px; /* Limit the width to align with other sections */
+    margin: 0 auto; /* Center the section horizontally */
+    background-color: rgb(251, 246, 246); /* Keep the background color */
+    text-align: center; /* Center-align the content */
+}
+
+.hp-categories-section .hp-header {
+    display: flex;
+    justify-content: space-between; /* Align heading and "See More" link */
+    align-items: center; /* Vertically center the content */
+    margin-bottom: 20px;
+}
+
+.hp-categories-section .hp-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(13, 13, 13); /* Ensure the text is visible on the green background */
+    margin: 0;
+    flex: 1; /* Allow the heading to take up space */
+    text-align: left; /* Align the heading to the left */
+}
+
+.hp-categories-section .hp-header .hp-see-more {
+    text-decoration: none;
+    color: #38991f; /* Ensure the link is visible on the green background */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.hp-categories-section .hp-header .hp-see-more:hover {
+    text-decoration: underline;
+    color: #ddd; /* Change color on hover */
+}
+
+.hp-categories {
+    display: flex;
+    justify-content: space-between; /* Space out the category cards */
+    gap: 20px; /* Add spacing between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.hp-category-card {
+    background-color: #e8e9ed;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* Three cards per row with spacing */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hp-category-card:hover {
+    transform: scale(1.05);
+    background-color: #e6e8eb;
+}
+
+.hp-category-card h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.hp-category-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Course List Styling */
+.hp-course-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Class Section Styling */
+.hp-class-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hp-class-section h1 {
+    font-size: 36px;
+    color: #237a49;
+    margin-bottom: 20px;
+}
+
+.hp-class-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+/* Course Card Styling */
+.hp-course-card {
+    background-color: #e8e9ed;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* Three cards per row with spacing */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hp-course-card:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f5;
+}
+
+.hp-course-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.hp-course-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #237a49;
+    margin-bottom: 10px;
+}
+
+.hp-course-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Start Learning Button */
+.hp-start-learning-button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #237a49;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hp-start-learning-button:hover {
+    background-color: #1a5f36;
+    transform: translateY(-2px);
+}
+
+.teach-course-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+    color: #fff;
+    background: url('teach.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.teach-course-page p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    line-height: 1.6;
+    background: rgb(233, 230, 230);
+    padding: 15px;
+    border-radius: 20px;
+    border-color: #1a5f36;
+    border-style: solid;
+    text-align: justify;
+}
+.teach-course-page h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+.footer {
+    background-color: #013220;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h3, .footer-section h1 {
+    color: #8A9A5B;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bcb7b7;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #BCB88A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+.footer-bottom p{
+    color: #bcb7b7;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
 .filters {
     background: #fff;
     padding: 40px;
@@ -195,101 +893,6 @@ main {
 .start-learning-button:hover {
     background-color: darkgreen;
 }
-
-/* Navigation Bar */
-nav {
-    background-color: #f8f9fa;
-    padding: 10px 0;
-    justify-content: flex-start;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px; /* Add spacing between list items */
-    padding: 0;
-    margin: 0;
-    margin-left: 20px;
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul li a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 12px; /* Add padding for clickable area */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
-}
-
-nav ul li a:hover {
-    border-radius: 5px;
-    color: rgb(27, 119, 50);
-    background-color: #f9f6f6; /* Optional: Add a subtle background on hover */
-}
-
-/* Horizontal Line */
-hr {
-    border: 1px solid #ddd;
-    margin: 0; /* Remove all margins */
-}
- 
-/* Search Bar Styling */
-.search-bar {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Push the search bar to the right */
-    margin-right: 60px; /* Add some space on the right */
-    justify-content: flex-end; /* Ensure it aligns to the far right */
-}
-.search-bar button {
-    padding: 5px 10px; /* Reduce padding to make the button smaller */
-    font-size: 14px; /* Decrease font size */
-    border-radius: 3px; /* Slightly round the corners */
-    background-color: rgb(52, 98, 63); /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* Remove border */
-    cursor: pointer; /* Add pointer cursor */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-.search-bar button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
-}
-.search-bar form {
-    position: absolute; /* Position the form relative to allow absolute positioning of the icon */
-    display: flex;
-    align-items: center;
-}
-
-.search-bar .search-icon {
-    position: absolute;
-    left: 10px; /* Position the icon inside the input field */
-    top: 50%; /* Center the icon vertically */
-    transform: translateY(-50%); /* Adjust for perfect vertical alignment */
-    font-size: 18px; /* Adjust the size of the icon */
-    color: #030303; /* Set the color of the icon */
-    pointer-events: none; /* Prevent the icon from interfering with input clicks */
-}
-
-.search-bar input[type="text"] {
-    width: 350px; /* Adjust the width of the input field */
-    padding: 8px 12px 8px 30px; /* Add left padding to make space for the icon */
-    border: 1px solid #ccc; /* Add a subtle border */
-    border-radius: 5px; /* Round the corners */
-    font-size: 16px; /* Set a readable font size */
-    outline: none; /* Remove the default outline */
-    transition: border-color 0.3s ease; /* Smooth transition for focus effect */
-}
-
-.search-bar input[type="text"]:focus {
-    border-color: #007bff; /* Change border color on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle glow effect */
-}
-/* Footer */
 .reset-button {
     background-color: #ff5733;
     color: white;
@@ -319,73 +922,12 @@ hr {
     outline: none; /* Prevents blue outline */
     box-shadow: none; /* Prevents extra styling */
 }
-.footer {
-    background-color: #013220;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-.footer-container {
+.course-page-main {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
+    gap: 50px;
 }
-
-.footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 250px;
+header {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #3e854b;
 }
-
-.footer-section h3, .footer-section h1 {
-    color: #8A9A5B;
-}
-
-.footer-section p {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.icon {
-    width: 30px;
-    height: 30px;
-    background-color: #BCB88A;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    font-size: 12px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-}
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons img {
-    width: 30px; /* Adjust size as needed */
-    height: 30px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-}
-

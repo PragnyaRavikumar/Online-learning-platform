@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class XI Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Main Content -->
+    <main>
+        <br><br>
+        <section class="hp-class-section">
+            <h1>Class XI Courses</h1>
+            <p>Explore the best courses for Class XI. Enhance your learning with expert instructors and interactive content.</p>
+            <div class="hp-course-list">
+                <div class="hp-course-card">
+                    <img src="course1.jpg" alt="Course 1">
+                    <h3>Node.js</h3>
+                    <p><strong>Yashaswi</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://www.youtube.com/watch?si=TDC2XlARozsdXF-m&v=CfPRbdT-wXo&feature=youtu.be" target="_blank" class="hp-start-learning-button">Start Learning</a>
+                </div>
+                <div class="hp-course-card">
+                    <img src="course3.jpeg" alt="Course 3">
+                    <h3>Chemistry-XI</h3>
+                    <p><strong>Bharath</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/Wg7G0zwdyWg?si=EC3iV1UL7uOC8NVV" target="_blank" class="hp-start-learning-button">Start Learning</a>
+                </div>
+                <div class="hp-course-card">
+                    <img src="course7.jpg" alt="Course 7">
+                    <h3>Mathematics-XI</h3>
+                    <p><strong>Chidananda</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/etykWjsMF7s?si=PmLNtJ-wWIj5uSN4" target="_blank" class="hp-start-learning-button">Start Learning</a>
+                </div>
+                <div class="hp-course-card">
+                    <img src="course2.jpg" alt="Course 2">
+                    <h3>Hindi</h3>
+                    <p><strong>Chandan C</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://www.youtube.com/watch?si=JBgoOBIZuFBo0adi&v=1lrz11BbqCA&feature=youtu.be" target="_blank" class="hp-start-learning-button">Start Learning</a>
+                </div>
+                <div class="hp-course-card">
+                    <img src="course6.jpg" alt="Course 6">
+                    <h3>Physics</h3>
+                    <p><strong>Chidananda</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/emZK9Y8HN2E?si=7lxp3snmzp8QdeiV" target="_blank" class="hp-start-learning-button">Start Learning</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

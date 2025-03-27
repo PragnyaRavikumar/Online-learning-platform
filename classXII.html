@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class XII Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Main Content -->
+    <main>
+        <br><br>
+        <section class="hp-class-section">
+            <h1>Class XII Courses</h1>
+            <p>Explore the best courses for Class XII. Prepare for your exams with expert guidance and comprehensive materials.</p>
+            <div class="hp-course-list">
+                <div class="hp-course-card">
+                    <img src="course3.jpeg" alt="Course 4">
+                    <h3>Chemistry-XII</h3>
+                    <p><strong>Sreekantha</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://www.youtube.com/live/_dp8oFNwyHU?si=CQN0htsS4NHMY4-9" target="_blank" class="hp-start-learning-button">Start Learning</a>
+                </div>
+                <div class="hp-course-card">
+                    <img src="course7.jpg" alt="Course 8">
+                    <h3>Mathematics-XII</h3>
+                    <p><strong>Chidananda-XII</strong></p>
+                    <p>107 Lessons</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/23a3rrNWmJ8?si=hvw-l8ubJdgR_CYv" target="_blank" class="hp-start-learning-button">Start Learning</a>
+                </div>
+                <div class="hp-course-card">
+                    <img src="course5.jpg" alt="Course 5">
+                    <h3>Biology</h3>
+                    <p><strong>Vineeth B</strong></p>
+                    <p>52 Lessons</p>
+                    <p>Free</p>
+                    <a href="https://www.youtube.com/live/_dp8oFNwyHU?si=CQN0htsS4NHMY4-9" target="_blank" class="hp-start-learning-button">Start Learning</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -28,78 +28,46 @@ function handleSearch(event) {
 }
 
 
+// Handle the "Get Started" button for instructors
+function handleClick() {
+    window.location.href = "teachCourse.html"; // Redirect to the "Teach a Course" page
+}
 
+// Handle category card clicks
+document.addEventListener("DOMContentLoaded", function () {
+    const categoryCards = document.querySelectorAll(".hp-category-card");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById("resetFilters").addEventListener("click", function () {
-    // Select all checkboxes and radio buttons
-    let filters = document.querySelectorAll(".filters input[type='checkbox'], .filters input[type='radio']");
-
-    // Uncheck all filters
-    filters.forEach(input => input.checked = false);
-
-    // Show all course cards
-    document.querySelectorAll(".course-card").forEach(card => {
-        card.style.display = "block";
+    categoryCards.forEach((card, index) => {
+        card.addEventListener("click", function () {
+            // Redirect to a specific page based on the category
+            if (index === 0) {
+                window.location.href = "classXI.html"; // Redirect to Class XI page
+            } else if (index === 1) {
+                window.location.href = "classXII.html"; // Redirect to Class XII page
+            } else {
+                console.log("No page assigned for this category.");
+            }
+        });
     });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const filters = document.querySelectorAll("input[data-filter-type]");
     const resetButton = document.getElementById("resetFilters");
     const courseCards = document.querySelectorAll(".course-card");
 
+    // Function to apply filters
     function applyFilters() {
         let selectedCategories = [];
         let selectedAuthors = [];
         let selectedPrice = [];
         let selectedRating = null;
 
+        // Collect selected filter values
         filters.forEach(filter => {
             if (filter.checked) {
                 let filterType = filter.getAttribute("data-filter-type");
-                let value = filter.value;
+                let value = filter.value.trim();
 
                 if (filterType === "category") {
                     selectedCategories.push(value);
@@ -108,22 +76,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (filterType === "price") {
                     selectedPrice.push(value);
                 } else if (filterType === "rating") {
-                    selectedRating = value;
+                    selectedRating = value; // Radio buttons ensure only one is selected
                 }
             }
         });
 
+        // Apply filtering logic
         courseCards.forEach(card => {
-            let cardCategory = card.getAttribute("data-category");
-            let cardAuthor = card.querySelector("p strong").textContent;
-            let cardPrice = card.querySelector(".course-info p:nth-of-type(3)").textContent;
-            let cardRating = card.getAttribute("data-rating");
+            let cardCategory = card.getAttribute("data-category").trim();
+            let cardAuthor = card.getAttribute("data-author").trim();
+            let cardPrice = card.getAttribute("data-price").trim();
+            let cardRating = card.getAttribute("data-rating").trim();
 
             let categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(cardCategory);
             let authorMatch = selectedAuthors.length === 0 || selectedAuthors.includes(cardAuthor);
             let priceMatch = selectedPrice.length === 0 || selectedPrice.includes(cardPrice);
             let ratingMatch = selectedRating === null || cardRating === selectedRating;
 
+            // Show or hide based on matching conditions
             if (categoryMatch && authorMatch && priceMatch && ratingMatch) {
                 card.style.display = "block";
             } else {
@@ -132,12 +102,45 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Attach event listeners to filters
     filters.forEach(filter => {
         filter.addEventListener("change", applyFilters);
     });
 
+    // Reset filters
     resetButton.addEventListener("click", function () {
         filters.forEach(filter => (filter.checked = false));
-        courseCards.forEach(card => (card.style.display = "block"));
+        applyFilters(); // Call filter function to reset display
     });
+
+    applyFilters(); // Apply initial filters (if any selected by default)
+});
+
+// Initialize Swiper for the "Popular Courses" section
+var swiper = new Swiper(".hp-mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: false, // Disable looping to avoid extra bullets
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
 });
