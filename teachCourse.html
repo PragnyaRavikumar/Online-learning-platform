@@ -21,7 +21,12 @@
             <button class="get-started-button" onclick="alert('Redirecting to course creation page...')">Get Started</button>
         </section>
     </main>
-
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

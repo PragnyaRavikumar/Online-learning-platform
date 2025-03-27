@@ -9,6 +9,16 @@
 <body>
     <!-- Navbar will be loaded here -->
     <div id="navbar"></div>
+    <br><br>
+    <main>
+
+    </main>
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

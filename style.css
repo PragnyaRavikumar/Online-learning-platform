@@ -152,7 +152,7 @@ hr {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle glow effect */
 }
 /* Section Styling */
-.start-section {
+.hp-start-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -163,13 +163,13 @@ hr {
     border-radius: 5px; /* Optional: Round the corners */
     flex-direction: row; /* Ensure the content flows in a row */
 }
-.start-section .text-container p {
+.hp-start-section .hp-text-container p {
     text-align: justify; /* Justify the text content */
     font-size: 16px; /* Optional: Adjust font size */
     line-height: 1.8; /* Optional: Adjust line height for better readability */
     color: #333; /* Optional: Set text color */
 }
-.start-section .text {
+.hp-start-section .hp-text {
     flex: 1;
     text-align: left; /* Align the paragraph to the left */
     font-size: 72px;
@@ -178,13 +178,13 @@ hr {
     margin-right: 20px; /* Add spacing between text and image */
     padding: 20px 0; /* Add padding to increase the height of the text container */
 }
-.image-container {
+.hp-image-container {
     flex: 1;
     display: flex;
     justify-content: flex-end; /* Align the image to the right */
     align-items: center; /* Center the image vertically */
 }
-.image-container.image img {
+.hp-image-container.hp-image img {
     max-width: 100%; /* Ensure the image scales responsively */
     width: 900px; /* Set the desired width */
     height: auto; /* Maintain the aspect ratio */
@@ -192,7 +192,7 @@ hr {
     border-radius: 5px; /* Optional: Round the image corners */
 }
 /* Styling for the View Courses button */
-.start-section .text-container a button {
+.hp-start-section .hp-text-container a button {
     background-color: #2c8920; /* Button background color */
     color: white; /* Button text color */
     border: none; /* Remove border */
@@ -203,11 +203,11 @@ hr {
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
 }
 
-.start-section .text-container a button:hover {
+.hp-start-section .hp-text-container a button:hover {
     background-color: #65b6ac; /* Darker shade on hover */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
-.why-container h1 {
+.hp-why-container h1 {
     position: relative; /* Allow precise positioning */
     top: -80px; /* Move the heading up */
     margin-bottom: 10px; /* Optional: Adjust spacing below the heading */
@@ -215,7 +215,7 @@ hr {
     font-size: 50px; /* Adjust the font size */
     color: #333; /* Optional: Set the text color */
 }
-.why-container {
+.hp-why-container {
     padding: 10px 10px; /* Add padding to increase the height of the container */
     background-color: #becfc4; /* Optional: Add a background color for better visibility */
     display: flex;
@@ -225,21 +225,21 @@ hr {
     gap: 20px; /* Add spacing between the image and text */
 }
 
-.why-container .image-left {
+.hp-why-container .hp-image-left {
     flex: 1; /* Divide the container into equal halves */
     display: flex;
     justify-content: center; /* Center the image horizontally */
     align-items: center; /* Center the image vertically */
 }
 
-.why-container .image-left img {
+.hp-why-container .hp-image-left img {
     max-width: 100%; /* Ensure the image scales responsively */
     width: 100%; /* Make the image take up the full width of its container */
     height: auto; /* Maintain the aspect ratio */
     border-radius: 5px; /* Optional: Round the image corners */
 }
 
-.why-container .text {
+.hp-why-container .hp-text {
     flex: 1; /* Divide the container into equal halves */
     text-align: justify; /* Align the text to the left */
     font-size: 18px; /* Set a readable font size */
@@ -248,7 +248,7 @@ hr {
     padding: 20px; /* Add padding for spacing inside the text container */
 }
 /* Container */
-.container {
+.hp-container {
     padding: 70px 50px;
     max-width: 1200px;
     margin: auto;
@@ -261,13 +261,13 @@ h2 {
     margin-bottom: 30px;
 }
 
-.highlight {
+.hp-highlight {
     color: rgb(27, 119, 50);
     font-weight: bold;
 }
 
 /* Features Section */
-.features {
+.hp-features {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -275,7 +275,7 @@ h2 {
 }
 
 /* Individual Feature */
-.feature {
+.hp-feature {
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -285,30 +285,30 @@ h2 {
 }
 
 /* Image Styling */
-.feature img {
+.hp-feature img {
     width: 90px;
     margin-bottom: 15px;
 }
 
 /* Text Styling */
-.feature h3 {
+.hp-feature h3 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.feature p {
+.hp-feature p {
     font-size: 14px;
     color: #555;
 }
-.popular-courses .section-header {
+.hp-popular-courses .hp-section-header {
     display: flex;
     justify-content: space-between; /* Align items to the left and right */
     align-items: center; /* Vertically center the content */
     margin-bottom: 20px;
 }
 
-.popular-courses .section-header h2 {
+.hp-popular-courses .hp-section-header h2 {
     flex: 1;
     font-size: 40px;
     color: #000000;
@@ -316,7 +316,7 @@ h2 {
     text-align: center;
 }
 
-.popular-courses .section-header .see-more {
+.hp-popular-courses .hp-section-header .hp-see-more {
     text-decoration: none;
     color: #2c8920;
     font-size: 16px;
@@ -324,17 +324,17 @@ h2 {
     transition: color 0.3s ease;
 }
 
-.popular-courses .section-header .see-more:hover {
+.hp-popular-courses .hp-section-header .hp-see-more:hover {
     color: #357b37; /* Change color on hover */
 }
-.popular-courses {
+.hp-popular-courses {
     padding: 50px 20px;
     background-color: #e0f5e9;
     text-align: center;
     font-size: large;
 }
 
-.popular-courses h2 {
+.hp-popular-courses h2 {
     font-size: 40px;
     margin-bottom: 20px;
     color: #369f57;
@@ -359,7 +359,7 @@ h2 {
     height: auto; /* Adjust height automatically */
 }
 
-.course-card img {
+.hp-course-card img {
     width: 100%;
     max-width: 150px; /* Reduce the image size */
     height: auto;
@@ -367,13 +367,13 @@ h2 {
     margin-bottom: 10px; /* Reduce spacing below the image */
 }
 
-.course-card h3 {
+.hp-course-card h3 {
     font-size: 16px; /* Reduce the font size */
     font-weight: bold;
     margin-bottom: 8px; /* Reduce spacing below the title */
     color: #333;
 }
-.start-learning-button {
+.hp-start-learning-button {
     text-decoration: none;
     color: #2c8920;
     background-color: #ffffff; /* Optional: Add a background color */
@@ -384,13 +384,13 @@ h2 {
     transition: box-shadow 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
 }
 
-.start-learning-button:hover {
+.hp-start-learning-button:hover {
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
     transform: translateY(-2px); /* Slightly lift the button on hover */
     background-color: #2c8920; /* Optional: Change background color on hover */
     color: #ffffff; /* Optional: Change text color on hover */
 }
-.course-card p {
+.hp-course-card p {
     font-size: 12px; /* Reduce the font size */
     color: #555;
 }
@@ -436,7 +436,7 @@ h2 {
     transform: scale(1.2); /* Slightly enlarge active bullet */
 }
 /* Instructor Section */
-.instructor-section {
+.hp-instructor-section {
     background-color: #f0f0f5;
     padding: 60px 10%;
     display: flex;
@@ -444,7 +444,7 @@ h2 {
 }
 
 /* Flexbox for Layout */
-.instructor-container {
+.hp-instructor-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -453,18 +453,18 @@ h2 {
 }
 
 /* Image Styling */
-.image-container {
+.hp-image-container {
     flex: 1; /* Takes 50% width */
 }
 
-.image-container img {
+.hp-image-container img {
     max-width: 100%;
     height: auto;
     width: 600px; /* Adjust the size */
 }
 
 /* Text Section */
-.text-container {
+.hp-text-container {
     flex: 1; /* Takes 50% width */
     padding-left: 50px;
 }
@@ -474,7 +474,7 @@ h2 {
     color: #222;
 }
 
-.highlight {
+.hp-highlight {
     color: #319e35;
     font-weight: bold;
 }
@@ -500,7 +500,7 @@ button {
 button:hover {
     background-color: #44a862;
 }
-.categories-section {
+.hp-categories-section {
     padding: 50px 20px; /* Add consistent padding */
     max-width: 1200px; /* Limit the width to align with other sections */
     margin: 0 auto; /* Center the section horizontally */
@@ -508,14 +508,14 @@ button:hover {
     text-align: center; /* Center-align the content */
 }
 
-.categories-section .header {
+.hp-categories-section .hp-header {
     display: flex;
     justify-content: space-between; /* Align heading and "See More" link */
     align-items: center; /* Vertically center the content */
     margin-bottom: 20px;
 }
 
-.categories-section .header h2 {
+.hp-categories-section .hp-header h2 {
     font-size: 36px;
     font-weight: bold;
     color: rgb(13, 13, 13); /* Ensure the text is visible on the green background */
@@ -524,7 +524,7 @@ button:hover {
     text-align: left; /* Align the heading to the left */
 }
 
-.categories-section .header .see-more {
+.hp-categories-section .hp-header .hp-see-more {
     text-decoration: none;
     color: #38991f; /* Ensure the link is visible on the green background */
     font-weight: bold;
@@ -532,19 +532,19 @@ button:hover {
     transition: color 0.3s ease;
 }
 
-.categories-section .header .see-more:hover {
+.hp-categories-section .hp-header .hp-see-more:hover {
     text-decoration: underline;
     color: #ddd; /* Change color on hover */
 }
 
-.categories {
+.hp-categories {
     display: flex;
     justify-content: space-between; /* Space out the category cards */
     gap: 20px; /* Add spacing between cards */
     flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
 }
 
-.category-card {
+.hp-category-card {
     background-color: #e8e9ed;
     padding: 20px;
     border-radius: 10px;
@@ -554,25 +554,25 @@ button:hover {
     transition: transform 0.3s, background-color 0.3s;
 }
 
-.category-card:hover {
+.hp-category-card:hover {
     transform: scale(1.05);
     background-color: #e6e8eb;
 }
 
-.category-card h3 {
+.hp-category-card h3 {
     font-size: 18px;
     margin: 0;
     font-weight: bold;
 }
 
-.category-card p {
+.hp-category-card p {
     font-size: 14px;
     color: #555;
 }
 
 
 /* Course List Styling */
-.course-list {
+.hp-course-list {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -580,7 +580,7 @@ button:hover {
 }
 
 /* Class Section Styling */
-.class-section {
+.hp-class-section {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -590,19 +590,19 @@ button:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.class-section h1 {
+.hp-class-section h1 {
     font-size: 36px;
     color: #237a49;
     margin-bottom: 20px;
 }
 
-.class-section p {
+.hp-class-section p {
     font-size: 16px;
     color: #555;
     margin-bottom: 40px;
 }
 /* Course Card Styling */
-.course-card {
+.hp-course-card {
     background-color: #e8e9ed;
     padding: 20px;
     border-radius: 10px;
@@ -612,33 +612,33 @@ button:hover {
     transition: transform 0.3s, background-color 0.3s;
 }
 
-.course-card:hover {
+.hp-course-card:hover {
     transform: scale(1.05);
     background-color: #f0f0f5;
 }
 
-.course-card img {
+.hp-course-card img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
-.course-card h3 {
+.hp-course-card h3 {
     font-size: 20px;
     font-weight: bold;
     color: #237a49;
     margin-bottom: 10px;
 }
 
-.course-card p {
+.hp-course-card p {
     font-size: 14px;
     color: #555;
     margin-bottom: 10px;
 }
 
 /* Start Learning Button */
-.start-learning-button {
+.hp-start-learning-button {
     text-decoration: none;
     color: #ffffff;
     background-color: #237a49;
@@ -649,7 +649,7 @@ button:hover {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.start-learning-button:hover {
+.hp-start-learning-button:hover {
     background-color: #1a5f36;
     transform: translateY(-2px);
 }
@@ -682,6 +682,254 @@ button:hover {
     font-size: 3rem;
     margin-bottom: 20px;
     color: rgb(0, 0, 0);
+}
+.footer {
+    background-color: #013220;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h3, .footer-section h1 {
+    color: #8A9A5B;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bcb7b7;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #BCB88A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+.footer-bottom p{
+    color: #bcb7b7;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+.filters {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition:none;
+}
+
+.filters h3 {
+    font-size: 25px;
+    margin: 15px 0 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.filters label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.filters input[type="checkbox"],
+.filters input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2); /* Enlarges checkboxes and radio buttons */
+    cursor: pointer;
+}
+
+/* Rating Section */
+.filters input[type="radio"] {
+    display: all; /* Hide radio buttons */
+}
+
+.filters label span {
+    font-size: 20px;
+    color: gray;
+    margin-left: 5px;
+}
+
+.filters input[type="radio"]:checked + span {
+    color: gold; /* Highlights the selected stars */
+}
+
+.filters label:hover {
+    background: #f3f3f3;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-card {
+    position: relative;
+    width: 80%; /* Adjust width */
+    height:auto;
+    max-width: 500px; /* Limit max width */
+    margin: 20px auto; /* Center the card */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 20px; /* Space between image & text */
+    background: white;
+    border-radius: 25px;
+    border-color:#3A5A40;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center; /* Centers card when alone */
+    flex-wrap: wrap; /* Allows multiple cards to wrap */
+}
+
+.course-card:only-child {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.course-card img {
+    width: 200px;
+    max-width: 80%;
+    justify-content: center;
+    height: auto;
+    border-radius: 10px;
+}
+.class-badge1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: #58ac63;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.class-badge2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgb(57, 75, 59);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.course-info {
+    flex-grow: 1;
+}
+
+.start-learning-button {
+    display: inline-block;
+    text-align: center;
+    background-color: #A3B18A;
+    color: #3A5A40;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.start-learning-button:hover {
+    background-color: darkgreen;
+}
+.reset-button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-block;  /* Prevents stretching */
+    width: auto;  /* Prevents it from expanding */
+    margin: 15px auto;  /* Centers the button */
+    text-align: center;
+}
+
+.reset-button:hover {
+    background-color: #e04e2a;
+}
+
+.reset-button:active {
+    background-color: #c44320;
+    transform: scale(0.98);
+}
+
+.reset-button:focus {
+    outline: none; /* Prevents blue outline */
+    box-shadow: none; /* Prevents extra styling */
+}
+.course-page-main {
+    display: flex;
+    gap: 50px;
+}
+header {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #3e854b;
 }
 
 

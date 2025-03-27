@@ -4,123 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar will be loaded here -->
     <div id="navbar"></div>
-    <script src="script.js"></script>
+
     <header>
         <h1>Courses Page</h1>
         <p>Showing 1-8 of 8 results</p>
     </header>
-    <main>
+
+    <main class="course-page-main">
+        <!-- Filter Section -->
         <aside class="filters">
             <h3>Categories</h3>
-            <label><input type="checkbox">Class XII</label>
-            <label><input type="checkbox">Class XI</label>
-
+            <label><input type="checkbox" value="Class XII" data-filter-type="category"> Class XII</label>
+            <label><input type="checkbox" value="Class XI" data-filter-type="category"> Class XI</label>
+        
             <h3>Author</h3>
-            <label><input type="checkbox">Bharath</label>
-            <label><input type="checkbox">Chandan C</label>
-            <label><input type="checkbox">Chidananda</label>
-            <label><input type="checkbox">Sreekantha</label>
-            <label><input type="checkbox">Vineeth B</label>
-            <label><input type="checkbox">Yashaswi</label>
-
+            <label><input type="checkbox" value="Bharath" data-filter-type="author"> Bharath</label>
+            <label><input type="checkbox" value="Chandan C" data-filter-type="author"> Chandan C</label>
+            <label><input type="checkbox" value="Chidananda" data-filter-type="author"> Chidananda</label>
+            <label><input type="checkbox" value="Sreekantha" data-filter-type="author"> Sreekantha</label>
+            <label><input type="checkbox" value="Vineeth B" data-filter-type="author"> Vineeth B</label>
+            <label><input type="checkbox" value="Yashaswi" data-filter-type="author"> Yashaswi</label>
+        
             <h3>Price</h3>
-            <label><input type="checkbox">Free</label>
-
+            <label><input type="checkbox" value="Free" data-filter-type="price"> Free</label>
+        
             <h3>Rating</h3>
-            <label><input type="radio" name="rating" value="1"> ⭐</label>
-            <label><input type="radio" name="rating" value="2"> ⭐⭐</label>
-            <label><input type="radio" name="rating" value="3"> ⭐⭐⭐</label>
-            <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐</label>
-            <label><input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐</label>            
+            <label><input type="radio" name="rating" value="1" data-filter-type="rating"> ⭐</label>
+            <label><input type="radio" name="rating" value="2" data-filter-type="rating"> ⭐⭐</label>
+            <label><input type="radio" name="rating" value="3" data-filter-type="rating"> ⭐⭐⭐</label>
+            <label><input type="radio" name="rating" value="4" data-filter-type="rating"> ⭐⭐⭐⭐</label>
+            <label><input type="radio" name="rating" value="5" data-filter-type="rating"> ⭐⭐⭐⭐⭐</label>
+        
+            <button id="resetFilters" class="reset-button">Reset Filters</button>
         </aside>
 
+        <!-- Courses Section -->
         <section class="courses">
-            <div class="course-card">
+            <div class="course-card" data-class="XI" data-author="Yashaswi" data-price="Free" data-rating="2" data-category="Class XI">
+                <div class="class-badge1">Class XI</div>
                 <img src="course1.jpg" alt="Course Image">
-                <h2>New Course</h2>
-                <p><strong>Yashaswi</strong></p>
-                <p><a href="https://youtu.be/CfPRbdT-wXo?si=TDC2XlARozsdXF-m">Course Link</a></p>
-                <p>0 Lessons</p>
-                <p>Free</p>
-                <button>Start Learning</button>
+                <div class="course-info">
+                    <h2>Node.js</h2>
+                    <p><strong>Yashaswi</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/CfPRbdT-wXo?si=TDC2XlARozsdXF-m" target="_blank" class="start-learning-button">Start Learning</a>
+                </div>
             </div>
-
-            <div class="course-card">
+            
+            <div class="course-card" data-class="XI" data-author="Chandan C" data-price="Free" data-rating="3" data-category="Class XI">
                 <img src="course2.jpg" alt="Course Image">
-                <h2>Hindi</h2>
-                <p><strong>Chandan C</strong></p>
-                <p><a href="https://youtu.be/1lrz11BbqCA?si=JBgoOBIZuFBo0adi">Course Link</a></p>
-                <p>1 Lesson</p>
-                <p>Free</p>
-                <button>Start Learning</button>
+                <div class="course-info">
+                    <div class="class-badge1">Class XI</div>
+                    <h2>Hindi</h2>
+                    <p><strong>Chandan C</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/1lrz11BbqCA?si=JBgoOBIZuFBo0adi" target="_blank" class="start-learning-button">Start Learning</a>
+                </div>
             </div>
-
-            <div class="course-card">
+            
+            <div class="course-card" data-class="XI" data-author="Bharath" data-price="Free" data-rating="1" data-category="Class XI">
                 <img src="course3.jpeg" alt="Course Image">
-                <h2>Chemistry-XI</h2>
-                <p><strong>Bharath</strong></p>
-                <p><a href="https://youtu.be/Wg7G0zwdyWg?si=EC3iV1UL7uOC8NVV">Course Link</a></p>
-                <p>1 Lesson</p>
-                <p>Free</p>
-                <button>Start Learning</button>
+                <div class="course-info">
+                    <div class="class-badge1">Class XI</div>
+                    <h2>Chemistry-XI</h2>
+                    <p><strong>Bharath</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/Wg7G0zwdyWg?si=EC3iV1UL7uOC8NVV" target="_blank" class="start-learning-button">Start Learning</a>
+                </div>
             </div>
-
-            <div class="course-card">
+            
+            <div class="course-card" data-class="XII" data-author="Sreekantha" data-price="Free" data-rating="1" data-category="Class XII">
                 <img src="course3.jpeg" alt="Course Image">
-                <h2>Chemistry-XII</h2>
-                <p><strong>Sreekantha</strong></p>
-                <p><a href="https://youtu.be/Wg7G0zwdyWg?si=EC3iV1UL7uOC8NVV">Course Link</a></p>
-                <p>0 Lessons</p>
-                <p>Free</p>
-                <button>Start Learning</button>
+                <div class="course-info">
+                    <div class="class-badge2">Class XII</div>
+                    <h2>Chemistry-XII</h2>
+                    <p><strong>Sreekantha</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/Wg7G0zwdyWg?si=EC3iV1UL7uOC8NVV" target="_blank" class="start-learning-button">Start Learning</a>
+                </div>
             </div>
-
-            <div class="course-card">
+            
+            <div class="course-card" data-class="XII" data-author="Vineeth B" data-price="Free" data-rating="5" data-category="Class XII">
                 <img src="course5.jpg" alt="Course Image">
-                <h2>Biology</h2>
-                <p><strong>Vineeth B</strong></p>
-                <p><a href="https://www.youtube.com/live/_dp8oFNwyHU?si=CQN0htsS4NHMY4-9">Course Link</a></p>
-                <p>52 Lessons</p>
-                <p>Free</p>
-                <button>Start Learning</button>
+                <div class="course-info">
+                    <div class="class-badge2">Class XII</div>
+                    <h2>Biology</h2>
+                    <p><strong>Vineeth B</strong></p>
+                    <p>52 Lessons</p>
+                    <p>Free</p>
+                    <a href="https://www.youtube.com/live/_dp8oFNwyHU?si=CQN0htsS4NHMY4-9" target="_blank" class="start-learning-button">Start Learning</a>
+                </div>
             </div>
-
-            <div class="course-card">
+            
+            <div class="course-card" data-class="XI" data-author="Chidananda" data-price="Free" data-rating="4" data-category="Class XI">
                 <img src="course6.jpg" alt="Course Image">
-                <h2>Physics</h2>
-                <p><strong>Chidananda</strong></p>
-                <p><a href="https://youtu.be/emZK9Y8HN2E?si=7lxp3snmzp8QdeiV">Course Link</a></p>
-                <p>0 Lessons</p>
-                <p>Free</p>
-                <button>Start Learning</button>
+                <div class="course-info">
+                    <div class="class-badge1">Class XI</div>
+                    <h2>Physics</h2>
+                    <p><strong>Chidananda</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/emZK9Y8HN2E?si=7lxp3snmzp8QdeiV" target="_blank" class="start-learning-button">Start Learning</a>
+                </div>
             </div>
-
-            <div class="course-card">
+            
+            <div class="course-card" data-class="XI" data-author="Chidananda-XI" data-price="Free" data-rating="2" data-category="Class XI">
                 <img src="course7.jpg" alt="Course Image">
-                <h2>Mathematics</h2>
-                <p><strong>Chidananda-XI</strong></p>
-                <p><a href="https://youtu.be/etykWjsMF7s?si=PmLNtJ-wWIj5uSN4">Course Link</a></p>
-                <p>0 Lessons</p>
-                <p>Free</p>
-                <button>Start Learning</button>
+                <div class="course-info">
+                    <div class="class-badge1">Class XI</div>
+                    <h2>Math-XI</h2>
+                    <p><strong>Chidananda</strong></p>
+                    <p>1 Lesson</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/etykWjsMF7s?si=PmLNtJ-wWIj5uSN4" target="_blank" class="start-learning-button">Start Learning</a>
+                </div>
             </div>
-
-             <div class="course-card">
+            
+            <div class="course-card" data-class="XII" data-author="Bharath" data-price="Free" data-rating="4" data-category="Class XII">
                 <img src="course7.jpg" alt="Course Image">
-                <h2>Mathematics-XII</h2>
-                <p><strong>Bharath</strong></p>
-                <p><a href="https://youtu.be/23a3rrNWmJ8?si=hvw-l8ubJdgR_CYv">Course Link</a></p>
-                <p>107 Lessons</p>
-                <p>Free</p>
-                <button>Start Learning</button>
+                <div class="course-info">
+                    <div class="class-badge2">Class XII</div>
+                    <h2>Math-XII</h2>
+                    <p><strong>Bharath</strong></p>
+                    <p>107 Lessons</p>
+                    <p>Free</p>
+                    <a href="https://youtu.be/23a3rrNWmJ8?si=hvw-l8ubJdgR_CYv" target="_blank" class="start-learning-button">Start Learning</a>
+                </div>
             </div>
+        </section>            
     </main>
 
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
