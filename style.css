@@ -603,55 +603,61 @@ button:hover {
 }
 /* Course Card Styling */
 .hp-course-card {
-    background-color: #e8e9ed;
-    padding: 20px;
-    border-radius: 10px;
-    width: calc(33.33% - 20px); /* Three cards per row with spacing */
+    position: relative;
+    width: 300px; /* Fixed width for all cards */
+    height: 400px; /* Fixed height for all cards */
+    margin: 15px; /* Add spacing between cards */
+    padding: 15px; /* Internal padding */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: space-between; /* Space out content evenly */
+    background: white;
+    border-radius: 10px; /* Slightly rounded corners */
+    border: 1px solid #ddd; /* Subtle border */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.hp-course-card:hover {
-    transform: scale(1.05);
-    background-color: #f0f0f5;
+    overflow: hidden; /* Prevent content overflow */
 }
 
 .hp-course-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    width: 100%; /* Ensure the image scales responsively */
+    max-width: 300px; /* Set a consistent maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Slightly rounded corners for the image */
+    margin-bottom: 10px; /* Add spacing below the image */
 }
 
 .hp-course-card h3 {
-    font-size: 20px;
+    font-size: 18px; /* Adjust font size for the title */
     font-weight: bold;
     color: #237a49;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .hp-course-card p {
-    font-size: 14px;
+    font-size: 14px; /* Adjust font size for the text */
     color: #555;
-    margin-bottom: 10px;
+    margin: 5px 0;
 }
 
-/* Start Learning Button */
 .hp-start-learning-button {
+    display: inline-block;
+    text-align: center;
+    background-color: darkgreen;
+    color: #fafefa;
+    padding: 8px 16px; /* Adjust padding for a smaller button */
     text-decoration: none;
-    color: #ffffff;
-    background-color: #237a49;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
+    font-size: 14px; /* Adjust font size for the button */
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Push the button to the bottom of the card */
 }
 
 .hp-start-learning-button:hover {
-    background-color: #1a5f36;
-    transform: translateY(-2px);
+    background-color: rgb(148, 191, 148);
+    color: rgb(0, 0, 0);
 }
 
 .teach-course-page {
@@ -892,6 +898,7 @@ button:hover {
 
 .start-learning-button:hover {
     background-color: darkgreen;
+    color: #dcdada;
 }
 .reset-button {
     background-color: #ff5733;
@@ -930,4 +937,157 @@ header {
     text-align: left;
     margin-bottom: 20px;
     color: #3e854b;
+}
+/* Contact Page Styling */
+.c-first-section {
+    background-image: url('contact-bg.png'); /* Replace 'background.jpg' with the path to your image */
+    height: 400px; /* Increase the height of the image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 100px 20px; /* Increase padding for more height */
+    color: rgb(0, 0, 0); /* Set text color to white for contrast */
+    text-align: center; /* Center-align the text */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.c-first-section h1 {
+    font-size: 36px; /* Adjust font size for the heading */
+    font-weight: bold;
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.c-first-section p {
+    font-size: 18px; /* Adjust font size for the paragraph */
+    line-height: 1.6; /* Improve readability */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 600px; /* Limit the width of the paragraph */
+    color: #013220;
+}
+
+.c-container {
+    width: 100%; /* Ensure the container takes full width */
+    max-width: 100%; /* Remove the maximum width limit */
+    display: flex;
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    justify-content: space-between; /* Add space between the sections */
+    align-items: flex-start; /* Align items to the top */
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Add spacing between the sections */
+}
+
+.c-help-section {
+    flex: 1; /* Allow the section to grow and take available space */
+    min-width: 400px; /* Ensure a minimum width for smaller screens */
+    max-width: 48%; /* Take up 48% of the container width */
+}
+
+.c-form-section {
+    flex: 1; /* Allow the section to grow and take available space */
+    min-width: 400px; /* Ensure a minimum width for smaller screens */
+    max-width: 48%; /* Take up 48% of the container width */
+
+}
+
+.c-input, .c-textarea {
+    width: 100%; /* Ensure inputs take full width */
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: 2px solid #90cd9a; /* Add a border with a greenish color */
+}
+
+.c-textarea {
+    resize: none; /* Prevent resizing of the textarea */
+}
+
+.c-submit-btn {
+    width: 100%; /* Ensure the button takes full width */
+    padding: 10px;
+    background-color: rgb(16, 93, 13);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.c-submit-btn:hover {
+    background-color: rgb(13, 183, 25);
+}
+
+.c-help-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.c-help-list {
+    list-style: none;
+    padding: 0;
+    line-height: 2.4; /* Increase line spacing for better readability */
+}
+
+.c-help-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.c-help-item::before {
+    content: "✔";
+    color: rgb(3, 84, 10);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.c-policy-text {
+    font-size: 14px;
+    margin-top: 10px;
+}
+/* contact section */
+.c-contact-section {
+    display: flex;
+    gap: 50px;
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    background-color: #d1f0d6;
+    border-radius: 10px;
+}
+
+.c-contact-box {
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    width: 100%;
+}
+
+.c-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.c-map-link {
+    color: rgb(35, 141, 47);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.c-map-link:hover {
+    text-decoration: underline;
+}
+.c-contact-box a {
+    color: green; /* Change mail link color to green */
+    text-decoration: none; /* Remove underline */
+}
+
+.c-contact-box a:hover {
+    text-decoration: underline; /* Add underline on hover */
 }

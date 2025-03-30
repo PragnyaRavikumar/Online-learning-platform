@@ -144,3 +144,11 @@ var swiper = new Swiper(".hp-mySwiper", {
         },
     },
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const mapLink = document.querySelector(".c-map-link");
+
+    mapLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Redirecting to Google Maps...");
+    });
+});
