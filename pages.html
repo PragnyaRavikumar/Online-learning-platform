@@ -4,15 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>Document</title>
+    <title>Contact</title>
 </head>
 <body>
     <!-- Navbar will be loaded here -->
     <div id="navbar"></div>
     <br><br>
     <main>
+    <section class="c-first-section">
+        <h1>How Can We Help?</h1>
+        <br>
+        <p>Have any questions or concerns? Feel free to contact us using the form below.</p>
+    </section>
+    <div class="c-container">
 
+            <!-- Help Section -->
+            <section class="c-help-section">
+                <h2 class="c-help-title">Here's What We Can Help With:</h2>
+                <br>
+                <ul class="c-help-list">
+                    <li class="c-help-item">Contact our sales team to talk about your LMS requirements</li>
+                    <li class="c-help-item">Get customer support</li>
+                    <li class="c-help-item">Contact our partnerships team</li>
+                    <li class="c-help-item">Answer any other questions you may have</li>
+                </ul>
+                <p class="c-policy-text">Run into a problem? Check out our <a href="#">Policy</a> for set-up guides, feature release notes, and troubleshooting articles.</p>
+            </section>
+        
+            <!-- Contact Form Section -->
+            <section class="c-form-section">
+                <form>
+                    <input type="text" class="c-input" placeholder="Your Name" required>
+                    <input type="email" class="c-input" placeholder="Email" required>
+                    <input type="text" class="c-input" placeholder="Subject" required>
+                    <textarea class="c-textarea" placeholder="Message" rows="4" required></textarea>
+                    <div>
+                        <input type="checkbox" id="subscribe">
+                        <label for="subscribe" class="c-checkbox-label">Opt-in for the latest promotions and events.</label>
+                    </div>
+                    <p class="c-privacy-text">By filling out this form and clicking submit, you agree to our <a href="#">privacy policy</a>.</p>
+                    <button type="submit" class="c-submit-btn">Submit</button>
+                </form>
+            </section>
+        
+     </div>
+     <section class="c-contact-section">
+        <div class="c-contact-box">
+            <div class="c-icon"><i class="fa-solid fa-location-dot" style="color: #013220;"></i></div>
+            <h3>Address</h3>
+            <p>4/A2, Kothnur Main Rd, Puttenahalli, JP Nagar 7th Phase, J. P. Nagar, Bengaluru, <br> Karnataka 560078</p><br>
+            <a href="https://www.google.co.in/maps/place/4,+Kothnur+Main+Rd,+BOB+Colony,+JP+Nagar+7th+Phase,+J.+P.+Nagar,+Bengaluru,+Karnataka+560078/@12.8956218,77.5791914,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae154103927f4b:0x7a0e4d79903db896!8m2!3d12.8956218!4d77.5817663?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoJLDEwMjExNjM5SAFQAw%3D%3D" target="_blank" class="c-map-link">View Map</a>
+        </div>
+    
+        <div class="c-contact-box">
+            <div class="c-icon"><i class="fa-solid fa-phone" style="color: #013220;"></i></div>
+            <h3>Contact info</h3>
+            <p>Mobile: +91 8088239564</p>
+            <p>Mail: <a href="mailto: rscsys2024@.com"> rscsys2024@.com</a></p>
+        </div>
+    
+        <div class="c-contact-box">
+            <div class="c-icon"><i class="fa-solid fa-clock" style="color: #013220;"></i></div>
+            <h3>Work timings</h3>
+            <p>Monday - Friday: 09:00 - 20:00</p>
+            <p>Sunday & Saturday: 10:30 - 22:00</p>
+        </div>
+    </section>
     </main>
     <div id="footer-container"></div>
     <script>
