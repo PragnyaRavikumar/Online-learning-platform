@@ -27,6 +27,9 @@ function animateNumber(element, target, duration) {
         element.textContent = start; // Update the element's text
     }, 50); // Update every 50ms
 }
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init();
+});
 
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
