@@ -152,3 +152,13 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Redirecting to Google Maps...");
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Whether animation should happen only once
+    });
+});
+// Function to refresh the page
+function refreshPage() {
+    location.reload(); // Reloads the current page
+}
