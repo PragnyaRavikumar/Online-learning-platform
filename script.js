@@ -184,3 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Redirecting to Google Maps...");
     });
 });
+// Function to refresh the page
+function refreshPage() {
+    location.reload(); // Reloads the current page
+}
