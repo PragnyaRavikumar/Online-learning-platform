@@ -5,99 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <title>about</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <title>About</title>
 </head>
 <body>
     <!-- Navbar will be loaded here -->
     <div id="navbar"></div>
     <br><br>
     <main>
-        <h1 class="about-page-heading">Learn with passion <br> to live with purpose</h1>
-<p class="about-page-description">
-    Fuel your curiosity and unlock your potential!<br> 
-    At RSCSys, we believe that passionate learning leads to a purposeful life.<br> 
-    Explore, grow, and achieve your dreams with our curated courses and resources 
-    designed to inspire and empower you.
-</p>
+        <!-- Heading Section -->
+         <section class="hero-about">
+        <h1 class="about-page-heading">
+          <span class="heading-left" data-aos="fade-right" data-aos-duration="1000">Learn with passion</span>
+          <br>
+          <span class="heading-right" data-aos="fade-left" data-aos-duration="1000">to live with purpose</span>
+      </h1>
+        <p class="about-page-description" data-aos="fade-up" data-aos-duration="1000">
+            Unlock your potential with RSCSys. Explore, grow, and achieve your dreams.
+        </p>
+      </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section" data-aos="fade-up" data-aos-duration="1500">
+          <h2>Our Journey</h2>
+          <div class="timeline">
+              <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                  <div class="timeline-icon">🎉</div>
+                  <h3>2020</h3>
+                  <p>RSCSys was founded with a mission to empower learners worldwide.</p>
+              </div>
+              <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                  <div class="timeline-icon">🚀</div>
+                  <h3>2021</h3>
+                  <p>Launched our first set of curated courses.</p>
+              </div>
+              <div class="timeline-item" data-aos="fade-right" data-aos-delay="600">
+                  <div class="timeline-icon">🌍</div>
+                  <h3>2022</h3>
+                  <p>Reached 50,000+ learners globally.</p>
+              </div>
+          </div>
+      </section>
+
+        <!-- Stats Section -->
         <div class="about-page">
-            <div class="about-stats-container">
+            <div class="about-stats-container" data-aos="fade-right" data-aos-duration="1200">
                 <div class="about-stats-text">
-                    <h2>We Just Keep Growing</h2>
-                    <p>We are dedicated to providing quality education and empowering learners worldwide. Join our growing community and be a part of the change.</p>
+                    <h2 data-aos="zoom-in" data-aos-duration="1000">We Just Keep Growing</h2>
+                    <p data-aos="fade-up" data-aos-duration="1000">Join our community and grow with quality education.</p>
                 </div>
                 <div class="about-stats-boxes">
-                    <div class="about-stats-box about-blue">
-                        <h3>94532</h3>
+                    <div class="about-stats-box about-blue" data-aos="zoom-in" data-aos-delay="200">
+                        <h3 class="counter" data-target="50000">0</h3>
                         <p>Foreign Followers</p>
                     </div>
-                    <div class="about-stats-box about-green">
-                        <h3>11223</h3>
+                    <div class="about-stats-box about-green" data-aos="zoom-in" data-aos-delay="400">
+                        <h3 class="counter" data-target="1000">0</h3>
                         <p>Classes Complete</p>
                     </div>
-                    <div class="about-stats-box about-yellow">
-                        <h3>25678</h3>
+                    <div class="about-stats-box about-yellow" data-aos="zoom-in" data-aos-delay="600">
+                        <h3 class="counter" data-target="20000">0</h3>
                         <p>Students Enrolled</p>
                     </div>
-                    <div class="about-stats-box about-pink">
-                        <h3>2678</h3>
+                    <div class="about-stats-box about-pink" data-aos="zoom-in" data-aos-delay="800">
+                        <h3 class="counter" data-target="500">0</h3>
                         <p>Certified Teachers</p>
                     </div>
                 </div>
             </div>
             <br>
-            <br>
-            <div class ="about-description2-container">
-                <div class="about-description2-text">
+
+
+            <!-- Description Section -->
+            <div class="about-description2-container">
+                <div class="about-description2-text" data-aos="fade-left" data-aos-duration="1200">
                     <h2>What makes us special?</h2>
-                    <p>At RSCSys, we are committed to providing quality education and empowering learners worldwide. Our mission is to inspire and equip individuals with the knowledge and skills they need to succeed in their personal and professional lives.</p>
+                    <p>We empower learners with knowledge and skills to succeed.</p>
+                    <br>
                 </div>
                 <div class="card-container">
-                    <!-- Card 1 -->
-                    <div class="card">
-                      <img src="About-image1.png" alt="Description 1">
-                      <h3>Who are we?</h3>
-                      <p>Description for card 1 goes here.</p>
+                    <div class="card" data-aos="flip-left" data-aos-delay="200">
+                        <img src="About-image1.png" alt="Description 1">
+                        <h3>Who are we?</h3>
+                        <p>RSCSys is a platform for passionate learners to explore and grow.</p>
                     </div>
-                  
-                    <!-- Card 2 -->
-                    <div class="card">
-                      <img src="About-image2.png" alt="Description 2">
-                      <h3>What we do?</h3>
-                      <p>Description for card 2 goes here.</p>
+                    <div class="card" data-aos="flip-left" data-aos-delay="400">
+                        <img src="About-image2.png" alt="Description 2">
+                        <h3>What we do?</h3>
+                        <p>We provide curated courses and resources to help learners achieve their goals.</p>
                     </div>
-                  
-                    <!-- Card 3 -->
-                    <div class="card">
-                      <img src="About-image3.jpg" alt="Description 3">
-                      <h3>How it works?</h3>
-                      <p>Description for card 3 goes here.</p>
+                    <div class="card" data-aos="flip-left" data-aos-delay="600">
+                        <img src="About-image3.jpg" alt="Description 3">
+                        <h3>How it works?</h3>
+                        <p>Our platform connects learners with expert instructors and engaging content.</p>
                     </div>
-                  </div>
-                  <br>
-                  <br>
-                  <section class="quote-section">
-                    <div class="quote-container">
-                      <div class="quote-image">
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <section class="quote-section" data-aos="fade-up" data-aos-duration="1500">
+                <div class="quote-container">
+                    <div class="quote-image" data-aos="zoom-in" data-aos-delay="200">
                         <img src="Quote-image.png" alt="Descriptive text about the image">
-                      </div>
- 
-                      <div class="quote-content">
-                        <blockquote>
-                          "Fuel your curiosity and unlock your potential!
-                          At RSCSys, we believe that passionate learning leads to a purposeful life.
-                          Explore, grow, and achieve your dreams with our curated courses and resources designed to inspire and empower you."
-                          <cite>— RSCSys</cite>
-                        </blockquote>
-                      </div>
                     </div>
-                  </section>
+                    <div class="quote-content" data-aos="fade-left" data-aos-delay="400">
+                        <blockquote>
+                            "Fuel your curiosity and unlock your potential! Explore, grow, and achieve your dreams with RSCSys."
+                            <cite>— RSCSys</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
+
+    <!-- Footer -->
     <div id="footer-container"></div>
     <script>
         fetch("footer.html")
         .then(response => response.text())
         .then(data => document.getElementById("footer-container").innerHTML = data);
+
+        // Initialize AOS
+        AOS.init();
     </script>
     <script src="script.js"></script>
 </body>

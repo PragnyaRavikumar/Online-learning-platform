@@ -14,6 +14,38 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error loading navbar:", error));
 });
+// Function to animate numbers
+function animateNumber(element, target, duration) {
+    let start = 0; // Starting number
+    const increment = Math.ceil(target / (duration / 50)); // Increment value
+    const interval = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            start = target; // Ensure it doesn't exceed the target
+            clearInterval(interval); // Stop the animation
+        }
+        element.textContent = start; // Update the element's text
+    }, 50); // Update every 50ms
+}
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init();
+});
+
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", function () {
+    // Select the elements and their target numbers
+    const stats = [
+        { element: document.querySelector(".about-blue h3"), target: 94532 },
+        { element: document.querySelector(".about-green h3"), target: 11223 },
+        { element: document.querySelector(".about-yellow h3"), target: 25678 },
+        { element: document.querySelector(".about-pink h3"), target: 2678 },
+    ];
+
+    // Animate each number
+    stats.forEach(stat => {
+        animateNumber(stat.element, stat.target, 2000); // 2000ms = 2 seconds
+    });
+});
 
 // Handle the search functionality
 function handleSearch(event) {
