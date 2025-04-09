@@ -10,9 +10,11 @@
 
 /* Body Styling */
 body {
-    background-color: #f8f9fa;
     text-align: center;
     padding: 20px;
+    background: linear-gradient(135deg, #efece9, #e0f7e9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
 }
 
 /* Navbar Container */
@@ -21,7 +23,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f8f9fa;
+    background-color: #efece9
     border-bottom: 1px solid #ddd; /* Optional: Add a subtle border below the navbar */
 }
 
@@ -44,7 +46,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 1rem;
     color: #000000;
-    background-color: #f9f5f5;
+    background-color: #efece9
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -59,7 +61,7 @@ body {
 
 /* Navigation Bar */
 nav {
-    background-color: #f8f9fa;
+    background-color: #efece9
     padding: 10px 0;
     justify-content: flex-start;
 }
@@ -934,21 +936,48 @@ button:hover {
 .social-icons img:hover {
     transform: scale(1.1);
 }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .filters {
-    background: #fff;
+    background: #ffffff;
     padding: 40px;
     border-radius: 20px;
     width: 300px;
     font-family: Arial, sans-serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition:none;
+    opacity: 0; /* Start invisible */
+    transform: translateX(-50px); /* Start slightly off-screen to the left */
+    animation: slideInLeft 1s ease forwards; /* Trigger animation */
+    animation-fill-mode: forwards;
+    transition: background-color 0.3s ease;
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .filters h3 {
     font-size: 25px;
     margin: 15px 0 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #42b580;
     padding-bottom: 5px;
+    color: #2c6e49; /* Dark green text */
 }
 
 .filters label {
@@ -957,6 +986,10 @@ button:hover {
     font-size: 14px;
     margin: 5px 0;
     cursor: pointer;
+    background: #e8f5e9; /* Light green background for labels */
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .filters input[type="checkbox"],
@@ -970,6 +1003,12 @@ button:hover {
 .filters input[type="radio"] {
     display: all; /* Hide radio buttons */
 }
+.filters input[type="checkbox"]:checked + label,
+.filters input[type="radio"]:checked + label {
+    background: #c8e6c9; /* Highlight selected filters */
+    color: #2c6e49; /* Dark green text for selected filters */
+    font-weight: bold;
+}
 
 .filters label span {
     font-size: 20px;
@@ -982,9 +1021,10 @@ button:hover {
 }
 
 .filters label:hover {
-    background: #f3f3f3;
+    background: #d4edda;
     padding: 3px;
     border-radius: 5px;
+    transform: scale(1.02);
 }
 
 
@@ -1072,6 +1112,24 @@ button:hover {
     border-radius: 6px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
+.class-badge1,
+.class-badge2 {
+    animation: bounceIn 1s ease forwards;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 
 .course-info {
@@ -1128,9 +1186,22 @@ button:hover {
     gap: 50px;
 }
 header {
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
     color: #3e854b;
+    opacity: 0; /* Start invisible */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: fadeSlideDown 1s ease forwards; /* Trigger animation */
+}
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* Contact Page Styling */
 .c-first-section {
