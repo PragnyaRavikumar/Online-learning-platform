@@ -239,6 +239,9 @@ hr {
     background-attachment: fixed; /* Parallax effect */
     overflow: hidden; /* Prevent content overflow */
     color: rgb(0, 0, 0); /* Ensure text is visible on the background */
+    font-family: 'Poppins', sans-serif; /* Modern and clean font style */
+    font-size: 1.5rem; /* Adjust font size for better readability */
+    letter-spacing: 1px; /* Add slight spacing between letters */
 }
 
 /* Background Video Styling */
@@ -322,6 +325,7 @@ hr {
     margin-bottom: 20px;
     animation: slideInFromTop 1s ease-in-out; /* Slide-in animation for the heading */
     color: rgb(14, 84, 40);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for text */
 }
 
 /* Paragraph Styling */
@@ -348,6 +352,7 @@ hr {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     animation: pulse 2s infinite; /* Add pulse animation */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for text */
 }
 
 .hp-view-courses-btn:hover {
@@ -796,7 +801,21 @@ h2 {
     font-size: 12px; /* Reduce the font size */
     color: #555;
 }
+.swiper {
+    width: 100%;
+    height: auto;
+}
 
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    background: #57925f;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 /* Swiper Navigation Arrows */
 .swiper-button-prev,
 .swiper-button-next {
@@ -1658,22 +1677,45 @@ header {
 
 /* Contact Page Styling */
 .c-first-section {
-    background-image: url('contact-bg.png'); /* Replace 'background.jpg' with the path to your image */
+    background-image: url('contact-bg.png'); /* Update the path if necessary */
     height: 400px; /* Increase the height of the image */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     padding: 100px 20px; /* Increase padding for more height */
     color: rgb(0, 0, 0); /* Set text color to white for contrast */
-    text-align: center; /* Center-align the text */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    opacity: 1; /* Temporarily set to 1 for debugging */
+    transform: none; /* Remove transform for debugging */
+    animation: none; /* Disable animation for debugging */
 }
 
+/* Shake Animation for H1 */
 .c-first-section h1 {
     font-size: 36px; /* Adjust font size for the heading */
     font-weight: bold;
     margin-bottom: 20px; /* Add spacing below the heading */
+    color: #013220; /* Text color */
+    display: inline-block; /* Ensure the element can be animated */
+    animation: shake 2.5s ease-in-out ; /* Shake animation */
+}
+
+/* Keyframes for Shake Animation */
+@keyframes shake {
+    0% {
+        transform: translateX(0); /* Start at original position */
+    }
+    25% {
+        transform: translateX(-5px); /* Move slightly to the left */
+    }
+    50% {
+        transform: translateX(5px); /* Move slightly to the right */
+    }
+    75% {
+        transform: translateX(-5px); /* Move back to the left */
+    }
+    100% {
+        transform: translateX(0); /* Return to original position */
+    }
 }
 
 .c-first-section p {
@@ -1682,6 +1724,11 @@ header {
     margin: 0 auto; /* Center the paragraph */
     max-width: 600px; /* Limit the width of the paragraph */
     color: #013220;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.9); /* Start slightly smaller */
+    animation: fadeInScale 1.5s ease-in-out forwards; /* Fade-in and scale animation */
+    animation-delay: 1s; /* Delay the animation */
+
 }
 
 .c-container {
@@ -1709,6 +1756,13 @@ header {
     min-width: 400px; /* Ensure a minimum width for smaller screens */
     max-width: 48%; /* Take up 48% of the container width */
 
+}
+/* Form Animation */
+.c-form-section form {
+    opacity: 0; /* Start hidden */
+    transform: translateY(30px); /* Start slightly below */
+    animation: fadeInSlideUp 2s ease-in-out forwards; /* Fade-in and slide-up animation */
+    animation-delay: 2s; /* Delay the animation */
 }
 
 .c-input, .c-textarea {
@@ -1752,6 +1806,29 @@ header {
     line-height: 2.4; /* Increase line spacing for better readability */
     align-items: center;
 }
+/* List Items Animation */
+.c-help-list li {
+    font-size: 1.1rem;
+    color: #333;
+    opacity: 0; /* Start hidden */
+    transform: translateX(-50px); /* Start off-screen to the left */
+    animation: slideInFromLeft 1s ease-in-out forwards; /* Slide-in animation */
+}
+.c-help-list li:nth-child(1) {
+    animation-delay: 1.2s; /* Delay for the first item */
+}
+
+.c-help-list li:nth-child(2) {
+    animation-delay: 1.4s; /* Delay for the second item */
+}
+
+.c-help-list li:nth-child(3) {
+    animation-delay: 1.6s; /* Delay for the third item */
+}
+
+.c-help-list li:nth-child(4) {
+    animation-delay: 1.8s; /* Delay for the fourth item */
+}
 
 .c-help-item {
     margin-bottom: 10px;
@@ -1786,8 +1863,71 @@ header {
     border-radius: 10px;
     width: 250px;
     width: 100%;
+    opacity: 0; /* Start hidden */
+    transform: scale(0.8); /* Start slightly smaller */
+    animation: popIn 1.5s ease-in-out forwards; /* Pop-in animation */
+}
+.c-contact-box:nth-child(1) {
+    animation-delay: 2.2s; /* Delay for the first box */
 }
 
+.c-contact-box:nth-child(2) {
+    animation-delay: 2.4s; /* Delay for the second box */
+}
+
+.c-contact-box:nth-child(3) {
+    animation-delay: 2.6s; /* Delay for the third box */
+}
+/* Fade-In and Scale Animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9); /* Start smaller */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Slide-In from Left Animation */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px); /* Start off-screen to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at original position */
+    }
+}
+/* Fade-In and Slide-Up Animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Pop-In Animation */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Start smaller */
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1); /* Slightly larger for a popping effect */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal size */
+    }
+}
 .c-icon {
     font-size: 40px;
     margin-bottom: 10px;
@@ -2141,5 +2281,267 @@ header {
     }
     .timeline-icon {
         left: -20px;
+    }
+}
+
+/* Responsive Design for Homepage */
+
+/* General Styles for Small Screens */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar-container {
+        flex-direction: column; /* Stack the navbar items vertically */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the navigation links vertically */
+        gap: 10px; /* Add spacing between links */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .auth-buttons {
+        flex-direction: column; /* Stack the buttons vertically */
+        gap: 5px; /* Add spacing between buttons */
+    }
+
+    .search-bar {
+        margin: 10px 0; /* Add spacing above and below the search bar */
+        width: 100%; /* Make the search bar full width */
+    }
+
+    .search-bar input[type="text"] {
+        width: 90%; /* Adjust the width of the input field */
+    }
+
+    /* Start Section */
+    .hp-start-section {
+        height: auto; /* Allow the section height to adjust automatically */
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    .hp-text-container h1 {
+        font-size: 2rem; /* Reduce the font size of the heading */
+    }
+
+    .hp-start-paragraph {
+        font-size: 1rem; /* Reduce the font size of the paragraph */
+        line-height: 1.5; /* Adjust line spacing */
+    }
+
+    .hp-view-courses-btn {
+        font-size: 1rem; /* Reduce the button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+
+    /* Clickable Lines */
+    .hp-clickable-lines {
+        flex-direction: column; /* Stack the lines vertically */
+        gap: 20px; /* Add spacing between items */
+        align-items: center; /* Center-align the clickable lines */
+    }
+
+    .hp-line-item {
+        flex-direction: column; /* Stack the number and text vertically */
+        align-items: center; /* Center-align the number and text */
+        gap: 5px; /* Add spacing between the number and text */
+    }
+
+    .circle-number {
+        width: 40px; /* Increase the size of the circle */
+        height: 40px;
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .hp-line {
+        font-size: 0.9rem; /* Reduce the font size */
+        text-align: center; /* Center-align the text */
+    }
+
+    /* Why Choose Section */
+    .hp-why-container {
+        flex-direction: column; /* Stack the image and text vertically */
+        gap: 20px; /* Add spacing between items */
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    .hp-why-container .hp-image-left img {
+        width: 80%; /* Reduce the image size */
+    }
+
+    .hp-why-container .hp-text {
+        font-size: 1rem; /* Reduce the font size */
+    }
+
+    /* Features Section */
+    .hp-features {
+        flex-direction: column; /* Stack the features vertically */
+        gap: 20px; /* Add spacing between features */
+    }
+
+    .hp-feature {
+        width: 100%; /* Make each feature take full width */
+    }
+
+    /* Popular Courses Section */
+    .hp-popular-courses {
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    .hp-course-card {
+        width: 100%; /* Make course cards take full width */
+        height: auto; /* Allow height to adjust automatically */
+    }
+
+    .hp-course-card img {
+        max-width: 80%; /* Reduce the image size */
+    }
+
+    .hp-course-card h3 {
+        font-size: 1rem; /* Reduce the font size */
+    }
+
+    .hp-course-card p {
+        font-size: 0.9rem; /* Reduce the font size */
+    }
+
+    .hp-start-learning-button {
+        font-size: 0.9rem; /* Reduce the button font size */
+        padding: 6px 12px; /* Adjust button padding */
+    }
+
+    /* Instructor Section */
+    .hp-instructor-container {
+        flex-direction: column; /* Stack the image and text vertically */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .hp-image-container img {
+        width: 80%; /* Reduce the image size */
+    }
+
+    .hp-text-container h2 {
+        font-size: 1.5rem; /* Reduce the font size */
+        text-align: center; /* Center-align the text */
+    }
+
+    .hp-text-container p {
+        font-size: 1rem; /* Reduce the font size */
+    }
+
+    button {
+        font-size: 1rem; /* Reduce the button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+
+    /* Categories Section */
+    .hp-categories {
+        flex-direction: column; /* Stack the category cards vertically */
+        gap: 20px; /* Add spacing between cards */
+    }
+
+    .hp-category-card {
+        width: 100%; /* Make each category card take full width */
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar-container {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .logo-container img {
+        width: 150px; /* Reduce the logo size */
+    }
+
+    nav ul {
+        gap: 5px; /* Reduce spacing between links */
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%; /* Make the input field full width */
+    }
+
+    /* Start Section */
+    .hp-text-container h1 {
+        font-size: 1.5rem; /* Further reduce the font size */
+    }
+
+    .hp-start-paragraph {
+        font-size: 0.9rem; /* Further reduce the font size */
+    }
+
+    .hp-view-courses-btn {
+        font-size: 0.9rem; /* Further reduce the button font size */
+        padding: 6px 12px; /* Adjust button padding */
+    }
+
+    /* Why Choose Section */
+    .hp-why-container .hp-image-left img {
+        width: 100%; /* Make the image take full width */
+    }
+
+    .hp-why-container .hp-text {
+        font-size: 0.9rem; /* Further reduce the font size */
+    }
+
+    /* Features Section */
+    .hp-feature img {
+        width: 60px; /* Reduce the image size */
+    }
+
+    .hp-feature h3 {
+        font-size: 1rem; /* Reduce the font size */
+    }
+
+    .hp-feature p {
+        font-size: 0.8rem; /* Reduce the font size */
+    }
+
+    /* Popular Courses Section */
+    .hp-course-card img {
+        max-width: 100%; /* Make the image take full width */
+    }
+
+    .hp-course-card h3 {
+        font-size: 0.9rem; /* Further reduce the font size */
+    }
+
+    .hp-course-card p {
+        font-size: 0.8rem; /* Further reduce the font size */
+    }
+
+    .hp-start-learning-button {
+        font-size: 0.8rem; /* Further reduce the button font size */
+        padding: 4px 8px; /* Adjust button padding */
+    }
+
+    /* Instructor Section */
+    .hp-image-container img {
+        width: 100%; /* Make the image take full width */
+    }
+
+    .hp-text-container h2 {
+        font-size: 1.2rem; /* Further reduce the font size */
+    }
+
+    .hp-text-container p {
+        font-size: 0.9rem; /* Further reduce the font size */
+    }
+
+    button {
+        font-size: 0.9rem; /* Further reduce the button font size */
+        padding: 6px 12px; /* Adjust button padding */
+    }
+
+    /* Categories Section */
+    .hp-category-card h3 {
+        font-size: 1rem; /* Reduce the font size */
+    }
+
+    .hp-category-card p {
+        font-size: 0.8rem; /* Reduce the font size */
     }
 }

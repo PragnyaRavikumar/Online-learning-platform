@@ -69,36 +69,6 @@ function handleSearch(event) {
     }
 }
 
-// Function to initialize Swiper
-function initializeSwiper() {
-    var swiper = new Swiper(".hp-mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: false, // Disable looping to avoid extra bullets
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-        },
-    });
-}
 
 // Function to handle category card clicks
 function handleCategoryClicks() {
@@ -213,3 +183,37 @@ function animateNumber(element, target, duration) {
         element.textContent = start; // Update the element's text
     }, 50); // Update every 50ms
 }
+
+function initializeSwiper() {
+    console.log("Initializing Swiper...");
+    var swiper = new Swiper(".hp-mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: false,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+}
+document.addEventListener("DOMContentLoaded", function () {
+    initializeSwiper();
+});
