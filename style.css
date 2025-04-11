@@ -178,6 +178,53 @@ hr {
     border-color: #007bff; /* Change border color on focus */
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle glow effect */
 }
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        gap: 10px;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul.show {
+        display: flex; /* Show navigation links when toggled */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+
+    .auth-buttons {
+        display: none; /* Hide auth buttons on smaller screens */
+    }
+
+    .search-bar {
+        display: none; /* Hide search bar on smaller screens */
+    }
+}
 /* Start Section Styling */
 .hp-start-section {
     position: relative;

@@ -1,53 +1,63 @@
 // HOMEPAGE SCRIPT
-// Load the navbar from navbar.html
 document.addEventListener("DOMContentLoaded", function () {
+    // Load the navbar from navbar.html
     fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('navbar').innerHTML = data;
+            const navbarContainer = document.getElementById('navbar');
+            if (navbarContainer) {
+                navbarContainer.innerHTML = data;
 
-            // Attach the search handler after the navbar is loaded
-            const searchForm = document.getElementById('search-form');
-            if (searchForm) {
-                searchForm.addEventListener('submit', handleSearch);
+                // Attach hamburger menu toggle logic
+                const hamburgerMenu = document.getElementById("hamburger-menu");
+                const navbar = document.querySelector("nav ul");
+
+                if (hamburgerMenu && navbar) {
+                    hamburgerMenu.addEventListener("click", function () {
+                        navbar.classList.toggle("show");
+                    });
+                } else {
+                    console.error("Hamburger menu or navbar not found in the DOM.");
+                }
+
+                // Attach search functionality
+                const searchForm = document.getElementById('search-form');
+                if (searchForm) {
+                    searchForm.addEventListener('submit', handleSearch);
+                }
             }
         })
         .catch(error => console.error("Error loading navbar:", error));
-});
-// Function to animate numbers
-function animateNumber(element, target, duration) {
-    let start = 0; // Starting number
-    const increment = Math.ceil(target / (duration / 50)); // Increment value
-    const interval = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-            start = target; // Ensure it doesn't exceed the target
-            clearInterval(interval); // Stop the animation
-        }
-        element.textContent = start; // Update the element's text
-    }, 50); // Update every 50ms
-}
-document.addEventListener("DOMContentLoaded", function () {
-    AOS.init();
-});
 
-// Wait for the DOM to load
-document.addEventListener("DOMContentLoaded", function () {
-    // Select the elements and their target numbers
-    const stats = [
-        { element: document.querySelector(".about-blue h3"), target: 94532 },
-        { element: document.querySelector(".about-green h3"), target: 11223 },
-        { element: document.querySelector(".about-yellow h3"), target: 25678 },
-        { element: document.querySelector(".about-pink h3"), target: 2678 },
-    ];
-
-    // Animate each number
-    stats.forEach(stat => {
-        animateNumber(stat.element, stat.target, 2000); // 2000ms = 2 seconds
+    // Initialize AOS animations
+    AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Whether animation should happen only once
     });
+
+    // Initialize Swiper for the "Popular Courses" section
+    initializeSwiper();
+
+    // Handle category card clicks
+    handleCategoryClicks();
+
+    // Handle filters for the course page
+    initializeFilters();
+
+    // Handle map link click
+    const mapLink = document.querySelector(".c-map-link");
+    if (mapLink) {
+        mapLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            alert("Redirecting to Google Maps...");
+        });
+    }
+
+    // Animate numbers on the stats section
+    animateStats();
 });
 
-// Handle the search functionality
+// Function to handle search functionality
 function handleSearch(event) {
     event.preventDefault(); // Prevent the form from submitting
     const query = document.getElementById('search-input').value.trim();
@@ -59,14 +69,39 @@ function handleSearch(event) {
     }
 }
 
-
-// Handle the "Get Started" button for instructors
-function handleClick() {
-    window.location.href = "teachCourse.html"; // Redirect to the "Teach a Course" page
+// Function to initialize Swiper
+function initializeSwiper() {
+    var swiper = new Swiper(".hp-mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: false, // Disable looping to avoid extra bullets
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
 }
 
-// Handle category card clicks
-document.addEventListener("DOMContentLoaded", function () {
+// Function to handle category card clicks
+function handleCategoryClicks() {
     const categoryCards = document.querySelectorAll(".hp-category-card");
 
     categoryCards.forEach((card, index) => {
@@ -81,9 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-});
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+// Function to initialize filters
+function initializeFilters() {
     const filters = document.querySelectorAll("input[data-filter-type]");
     const resetButton = document.getElementById("resetFilters");
     const courseCards = document.querySelectorAll(".course-card");
@@ -140,57 +176,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Reset filters
-    resetButton.addEventListener("click", function () {
-        filters.forEach(filter => (filter.checked = false));
-        applyFilters(); // Call filter function to reset display
-    });
+    if (resetButton) {
+        resetButton.addEventListener("click", function () {
+            filters.forEach(filter => (filter.checked = false));
+            applyFilters(); // Call filter function to reset display
+        });
+    }
 
     applyFilters(); // Apply initial filters (if any selected by default)
-});
+}
 
-// Initialize Swiper for the "Popular Courses" section
-var swiper = new Swiper(".hp-mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: false, // Disable looping to avoid extra bullets
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
-    },
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const mapLink = document.querySelector(".c-map-link");
+// Function to animate numbers in the stats section
+function animateStats() {
+    const stats = [
+        { element: document.querySelector(".about-blue h3"), target: 94532 },
+        { element: document.querySelector(".about-green h3"), target: 11223 },
+        { element: document.querySelector(".about-yellow h3"), target: 25678 },
+        { element: document.querySelector(".about-pink h3"), target: 2678 },
+    ];
 
-    mapLink.addEventListener("click", function (event) {
-        event.preventDefault();
-        alert("Redirecting to Google Maps...");
+    stats.forEach(stat => {
+        animateNumber(stat.element, stat.target, 2000); // 2000ms = 2 seconds
     });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    AOS.init({
-        duration: 1000, // Animation duration in milliseconds
-        once: true, // Whether animation should happen only once
-    });
-});
-// Function to refresh the page
-function refreshPage() {
-    location.reload(); // Reloads the current page
+}
+
+// Function to animate numbers
+function animateNumber(element, target, duration) {
+    let start = 0; // Starting number
+    const increment = Math.ceil(target / (duration / 50)); // Increment value
+    const interval = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            start = target; // Ensure it doesn't exceed the target
+            clearInterval(interval); // Stop the animation
+        }
+        element.textContent = start; // Update the element's text
+    }, 50); // Update every 50ms
 }
