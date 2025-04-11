@@ -1591,6 +1591,71 @@ header {
         transform: translateY(0);
     }
 }
+@media (max-width: 768px) {
+    .timeline-item,
+    .about-stats-box,
+    .card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .quote-image,
+    .quote-content {
+        flex: 1 1 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .quote-content blockquote {
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .timeline-item,
+    .about-stats-box,
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .about-page-heading {
+        font-size: 2rem;
+    }
+
+    .about-page-description {
+        font-size: 1rem;
+    }
+
+    .about-stats-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-stats-text p {
+        font-size: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    blockquote {
+        font-size: 1.2rem;
+    }
+
+    /* Add spacing between sections */
+    .about-stats-container {
+        margin-bottom: 40px; /* Add space below the stats section */
+    }
+
+    .about-description2-container {
+        margin-top: 20px; /* Add space above the description section */
+    }
+}
+
 /* Contact Page Styling */
 .c-first-section {
     background-image: url('contact-bg.png'); /* Replace 'background.jpg' with the path to your image */
