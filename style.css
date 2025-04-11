@@ -5,9 +5,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Set Roboto as the default font */
+}
+/* Optional: Override specific elements if needed */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif; /* Ensure headings use Roboto */
+    font-weight: 700; /* Use bold weight for headings */
 }
 
+p, a, button, input, label {
+    font-family: 'Roboto', sans-serif; /* Ensure other elements use Roboto */
+    font-weight: 400; /* Use regular weight for text */
+}
 /* Body Styling */
 body {
     text-align: center;
@@ -15,6 +24,7 @@ body {
     background: linear-gradient(135deg, #efece9, #e0f7e9);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
+    font-family: 'Roboto', sans-serif; /* Set Roboto as the default font */
 }
 
 /* Navbar Container */
@@ -239,7 +249,7 @@ hr {
     background-attachment: fixed; /* Parallax effect */
     overflow: hidden; /* Prevent content overflow */
     color: rgb(0, 0, 0); /* Ensure text is visible on the background */
-    font-family: 'Poppins', sans-serif; /* Modern and clean font style */
+    font-family: 'Roboto Slab', serif; /* Modern and clean font style */
     font-size: 1.5rem; /* Adjust font size for better readability */
     letter-spacing: 1px; /* Add slight spacing between letters */
 }

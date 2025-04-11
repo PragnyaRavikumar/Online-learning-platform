@@ -217,3 +217,7 @@ function initializeSwiper() {
 document.addEventListener("DOMContentLoaded", function () {
     initializeSwiper();
 });
+// Function to refresh the page
+function refreshPage() {
+    location.reload(); // Reloads the current page
+}
