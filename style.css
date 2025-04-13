@@ -9,7 +9,7 @@
 }
 /* Optional: Override specific elements if needed */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif; /* Ensure headings use Roboto */
+    font-family: 'Press Start 2P', monospace;
     font-weight: 700; /* Use bold weight for headings */
 }
 
@@ -272,7 +272,7 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: rgba(116, 116, 116, 0.5); /* Semi-transparent overlay for better text visibility */
+    background: rgba(168, 200, 172, 0.5); /* Semi-transparent overlay for better text visibility */
     z-index: 1; /* Place it above the video but behind the content */
 }
 
@@ -1820,6 +1820,7 @@ header {
 .c-help-list li {
     font-size: 1.1rem;
     color: #333;
+    margin-left: 100px; /* Start a bit from the right side */
     opacity: 0; /* Start hidden */
     transform: translateX(-50px); /* Start off-screen to the left */
     animation: slideInFromLeft 1s ease-in-out forwards; /* Slide-in animation */

@@ -1,63 +1,22 @@
 // HOMEPAGE SCRIPT
+
+// Load the navbar from navbar.html
 document.addEventListener("DOMContentLoaded", function () {
-    // Load the navbar from navbar.html
     fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
-            const navbarContainer = document.getElementById('navbar');
-            if (navbarContainer) {
-                navbarContainer.innerHTML = data;
+            document.getElementById('navbar').innerHTML = data;
 
-                // Attach hamburger menu toggle logic
-                const hamburgerMenu = document.getElementById("hamburger-menu");
-                const navbar = document.querySelector("nav ul");
-
-                if (hamburgerMenu && navbar) {
-                    hamburgerMenu.addEventListener("click", function () {
-                        navbar.classList.toggle("show");
-                    });
-                } else {
-                    console.error("Hamburger menu or navbar not found in the DOM.");
-                }
-
-                // Attach search functionality
-                const searchForm = document.getElementById('search-form');
-                if (searchForm) {
-                    searchForm.addEventListener('submit', handleSearch);
-                }
+            // Attach the search handler after the navbar is loaded
+            const searchForm = document.getElementById('search-form');
+            if (searchForm) {
+                searchForm.addEventListener('submit', handleSearch);
             }
         })
         .catch(error => console.error("Error loading navbar:", error));
-
-    // Initialize AOS animations
-    AOS.init({
-        duration: 1000, // Animation duration in milliseconds
-        once: true, // Whether animation should happen only once
-    });
-
-    // Initialize Swiper for the "Popular Courses" section
-    initializeSwiper();
-
-    // Handle category card clicks
-    handleCategoryClicks();
-
-    // Handle filters for the course page
-    initializeFilters();
-
-    // Handle map link click
-    const mapLink = document.querySelector(".c-map-link");
-    if (mapLink) {
-        mapLink.addEventListener("click", function (event) {
-            event.preventDefault();
-            alert("Redirecting to Google Maps...");
-        });
-    }
-
-    // Animate numbers on the stats section
-    animateStats();
 });
 
-// Function to handle search functionality
+// Handle the search functionality
 function handleSearch(event) {
     event.preventDefault(); // Prevent the form from submitting
     const query = document.getElementById('search-input').value.trim();
@@ -69,9 +28,13 @@ function handleSearch(event) {
     }
 }
 
+// Handle the "Get Started" button for instructors
+function handleClick() {
+    window.location.href = "teachCourse.html"; // Redirect to the "Teach a Course" page
+}
 
-// Function to handle category card clicks
-function handleCategoryClicks() {
+// Handle category card clicks
+document.addEventListener("DOMContentLoaded", function () {
     const categoryCards = document.querySelectorAll(".hp-category-card");
 
     categoryCards.forEach((card, index) => {
@@ -86,10 +49,10 @@ function handleCategoryClicks() {
             }
         });
     });
-}
+});
 
-// Function to initialize filters
-function initializeFilters() {
+// Initialize filters for the course cards
+document.addEventListener("DOMContentLoaded", function () {
     const filters = document.querySelectorAll("input[data-filter-type]");
     const resetButton = document.getElementById("resetFilters");
     const courseCards = document.querySelectorAll(".course-card");
@@ -154,35 +117,7 @@ function initializeFilters() {
     }
 
     applyFilters(); // Apply initial filters (if any selected by default)
-}
-
-// Function to animate numbers in the stats section
-function animateStats() {
-    const stats = [
-        { element: document.querySelector(".about-blue h3"), target: 94532 },
-        { element: document.querySelector(".about-green h3"), target: 11223 },
-        { element: document.querySelector(".about-yellow h3"), target: 25678 },
-        { element: document.querySelector(".about-pink h3"), target: 2678 },
-    ];
-
-    stats.forEach(stat => {
-        animateNumber(stat.element, stat.target, 2000); // 2000ms = 2 seconds
-    });
-}
-
-// Function to animate numbers
-function animateNumber(element, target, duration) {
-    let start = 0; // Starting number
-    const increment = Math.ceil(target / (duration / 50)); // Increment value
-    const interval = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-            start = target; // Ensure it doesn't exceed the target
-            clearInterval(interval); // Stop the animation
-        }
-        element.textContent = start; // Update the element's text
-    }, 50); // Update every 50ms
-}
+});
 
 function initializeSwiper() {
     console.log("Initializing Swiper...");
@@ -221,3 +156,9 @@ document.addEventListener("DOMContentLoaded", function () {
 function refreshPage() {
     location.reload(); // Reloads the current page
 }
+  window.addEventListener("DOMContentLoaded", () => {
+    const bgVideo = document.querySelector(".hp-bg-video");
+    if (bgVideo) {
+      bgVideo.playbackRate = 1.5; // Half the normal speed (1 is default)
+    }
+  });
