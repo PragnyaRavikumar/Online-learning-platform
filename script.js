@@ -152,10 +152,38 @@ function initializeSwiper() {
 document.addEventListener("DOMContentLoaded", function () {
     initializeSwiper();
 });
-// Function to refresh the page
-function refreshPage() {
-    location.reload(); // Reloads the current page
-}
+// Handle hp-clickable-lines clicks to change paragraph content and refresh the page
+document.addEventListener("DOMContentLoaded", function () {
+    const clickableLines = document.querySelectorAll(".hp-line");
+    const paragraph = document.querySelector(".hp-start-paragraph");
+
+    // Define the content for each line
+    const contentMap = [
+        "Discover your potential and take the first step toward success.",
+        "Explore innovative ideas and bring them to life.",
+        "Challenge the norm and embrace new perspectives.",
+        "Reach new heights and achieve your dreams."
+    ];
+
+    // Check if a line index is stored in localStorage
+    const storedIndex = localStorage.getItem("selectedLineIndex");
+    if (storedIndex !== null) {
+        // Update the paragraph content based on the stored index
+        paragraph.innerHTML = `<strong>${contentMap[storedIndex]}</strong>`;
+        // Clear the stored index after updating the content
+        localStorage.removeItem("selectedLineIndex");
+    }
+
+    // Add click event listeners to each line
+    clickableLines.forEach((line, index) => {
+        line.addEventListener("click", function () {
+            // Store the clicked line's index in localStorage
+            localStorage.setItem("selectedLineIndex", index);
+            // Refresh the page
+            location.reload();
+        });
+    });
+});
   window.addEventListener("DOMContentLoaded", () => {
     const bgVideo = document.querySelector(".hp-bg-video");
     if (bgVideo) {
