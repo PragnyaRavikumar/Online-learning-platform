@@ -190,3 +190,75 @@ document.addEventListener("DOMContentLoaded", function () {
       bgVideo.playbackRate = 1.5; // Half the normal speed (1 is default)
     }
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    // Handle Signup Form Submission
+    const signupForm = document.querySelector(".auth-form");
+    if (signupForm && window.location.pathname.includes("signup.html")) {
+        signupForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirm-password").value.trim();
+
+            // Validate form inputs
+            if (!name || !email || !password || !confirmPassword) {
+                alert("All fields are required.");
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            // Store user data in localStorage
+            localStorage.setItem("user", JSON.stringify({ name, email, password }));
+            alert("Signup successful! You can now log in.");
+            window.location.href = "login.html"; // Redirect to login page
+        });
+    }
+
+    // Handle Login Form Submission
+    const loginForm = document.querySelector(".auth-form");
+    if (loginForm && window.location.pathname.includes("login.html")) {
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            // Validate form inputs
+            if (!email || !password) {
+                alert("Both email and password are required.");
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            // Retrieve user data from localStorage
+            const storedUser = JSON.parse(localStorage.getItem("user"));
+            if (storedUser && storedUser.email === email && storedUser.password === password) {
+                alert("Login successful!");
+                window.location.href = "index.html"; // Redirect to homepage
+            } else {
+                alert("Invalid email or password.");
+            }
+        });
+    }
+});
+
+// Utility function to validate email format
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
