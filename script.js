@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("DOMContentLoaded", () => {
     const bgVideo = document.querySelector(".hp-bg-video");
     if (bgVideo) {
-      bgVideo.playbackRate = 1.5; // Half the normal speed (1 is default)
+      bgVideo.playbackRate = 1.2; // Half the normal speed (1 is default)
     }
   });
   document.addEventListener("DOMContentLoaded", function () {

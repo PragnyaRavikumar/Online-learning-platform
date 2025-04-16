@@ -243,7 +243,6 @@ hr {
     justify-content: center;
     height: 80vh; /* Full viewport height */
     padding: 20px;
-    background-image: url('bg.png'); /* Replace 'bg.png' with your image path */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the image */
     background-attachment: fixed; /* Parallax effect */
@@ -272,9 +271,10 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(168, 200, 172, 0.5); /* Semi-transparent overlay for better text visibility */
+    background: rgba(200, 205, 201, 0.5); /* Semi-transparent overlay for better text visibility */
     z-index: 1; /* Place it above the video but behind the content */
 }
+
 
 /* Text Container */
 .hp-text-container {
