@@ -539,6 +539,8 @@ hr {
     width: 100%; /* Make the image take up the full width of its container */
     height: auto; /* Maintain the aspect ratio */
     border-radius: 5px; /* Optional: Round the image corners */
+    opacity: 0.8; /* Set transparency level */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .hp-why-container .hp-text {
@@ -977,6 +979,12 @@ h2 {
         transform: translateX(0); /* End at original position */
     }
 }
+.get-started-button {
+    animation: none; /* Disable animation for debugging */
+    opacity: 1; /* Ensure visibility */
+    transform: translateY(0); /* Reset position */
+}
+
 h2 {
     font-size: 36px;
     color: #222;
@@ -1250,7 +1258,7 @@ button:hover {
     cursor: pointer;
     border-radius: 6px;
     margin-top: 20px;
-    opacity: 0; /* Start hidden */
+    opacity: 1; /* Start hidden */
     transform: translateY(30px); /* Start slightly below */
     animation: bounceIn 2s ease-in-out forwards; /* Bounce-in animation */
     animation-delay: 2s; /* Delay the animation */
@@ -2440,265 +2448,321 @@ header {
         padding: 10px;
     }
 }
-
-/* Responsive Design for Homepage */
-
-/* General Styles for Small Screens */
-@media (max-width: 768px) {
+/* Responsive Design for homepage */
+/* General Responsive Adjustments */
+@media (max-width: 1024px) {
     /* Navbar */
     .navbar-container {
-        flex-direction: column; /* Stack the navbar items vertically */
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
     }
 
     nav ul {
-        flex-direction: column; /* Stack the navigation links vertically */
-        gap: 10px; /* Add spacing between links */
-        margin-left: 0; /* Remove left margin */
-    }
-
-    .auth-buttons {
-        flex-direction: column; /* Stack the buttons vertically */
-        gap: 5px; /* Add spacing between buttons */
+        flex-direction: column;
+        gap: 10px;
     }
 
     .search-bar {
-        margin: 10px 0; /* Add spacing above and below the search bar */
-        width: 100%; /* Make the search bar full width */
+        width: 100%;
+        margin-top: 10px;
     }
 
-    .search-bar input[type="text"] {
-        width: 90%; /* Adjust the width of the input field */
-    }
-
-    /* Start Section */
+    /* Hero Section */
     .hp-start-section {
-        height: auto; /* Allow the section height to adjust automatically */
-        padding: 20px; /* Add padding for smaller screens */
+        height: auto;
+        padding: 20px;
     }
 
-    .hp-text-container h1 {
-        font-size: 2rem; /* Reduce the font size of the heading */
+    .hp-animated-heading {
+        font-size: 2.5rem;
     }
 
     .hp-start-paragraph {
-        font-size: 1rem; /* Reduce the font size of the paragraph */
-        line-height: 1.5; /* Adjust line spacing */
+        font-size: 1rem;
     }
 
     .hp-view-courses-btn {
-        font-size: 1rem; /* Reduce the button font size */
-        padding: 8px 16px; /* Adjust button padding */
-    }
-
-    /* Clickable Lines */
-    .hp-clickable-lines {
-        flex-direction: column; /* Stack the lines vertically */
-        gap: 20px; /* Add spacing between items */
-        align-items: center; /* Center-align the clickable lines */
-    }
-
-    .hp-line-item {
-        flex-direction: column; /* Stack the number and text vertically */
-        align-items: center; /* Center-align the number and text */
-        gap: 5px; /* Add spacing between the number and text */
-    }
-
-    .circle-number {
-        width: 40px; /* Increase the size of the circle */
-        height: 40px;
-        font-size: 1rem; /* Adjust font size */
-    }
-
-    .hp-line {
-        font-size: 0.9rem; /* Reduce the font size */
-        text-align: center; /* Center-align the text */
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 
     /* Why Choose Section */
     .hp-why-container {
-        flex-direction: column; /* Stack the image and text vertically */
-        gap: 20px; /* Add spacing between items */
-        padding: 20px; /* Add padding for smaller screens */
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hp-why-container .hp-image-left img {
-        width: 80%; /* Reduce the image size */
-    }
-
-    .hp-why-container .hp-text {
-        font-size: 1rem; /* Reduce the font size */
+    .hp-image-left {
+        margin-bottom: 20px;
     }
 
     /* Features Section */
     .hp-features {
-        flex-direction: column; /* Stack the features vertically */
-        gap: 20px; /* Add spacing between features */
+        flex-direction: column;
     }
 
     .hp-feature {
-        width: 100%; /* Make each feature take full width */
+        width: 100%;
     }
 
     /* Popular Courses Section */
-    .hp-popular-courses {
-        padding: 20px; /* Add padding for smaller screens */
-    }
-
     .hp-course-card {
-        width: 100%; /* Make course cards take full width */
-        height: auto; /* Allow height to adjust automatically */
-    }
-
-    .hp-course-card img {
-        max-width: 80%; /* Reduce the image size */
-    }
-
-    .hp-course-card h3 {
-        font-size: 1rem; /* Reduce the font size */
-    }
-
-    .hp-course-card p {
-        font-size: 0.9rem; /* Reduce the font size */
-    }
-
-    .hp-start-learning-button {
-        font-size: 0.9rem; /* Reduce the button font size */
-        padding: 6px 12px; /* Adjust button padding */
+        width: 100%;
     }
 
     /* Instructor Section */
     .hp-instructor-container {
-        flex-direction: column; /* Stack the image and text vertically */
-        gap: 20px; /* Add spacing between items */
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hp-image-container img {
-        width: 80%; /* Reduce the image size */
-    }
-
-    .hp-text-container h2 {
-        font-size: 1.5rem; /* Reduce the font size */
-        text-align: center; /* Center-align the text */
-    }
-
-    .hp-text-container p {
-        font-size: 1rem; /* Reduce the font size */
-    }
-
-    button {
-        font-size: 1rem; /* Reduce the button font size */
-        padding: 8px 16px; /* Adjust button padding */
+    .hp-instructor-container img {
+        max-width: 80%;
     }
 
     /* Categories Section */
     .hp-categories {
-        flex-direction: column; /* Stack the category cards vertically */
-        gap: 20px; /* Add spacing between cards */
+        flex-direction: column;
+        gap: 20px;
     }
 
     .hp-category-card {
-        width: 100%; /* Make each category card take full width */
+        width: 100%;
+        text-align: center;
     }
 }
 
-/* Extra Small Screens */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     /* Navbar */
     .navbar-container {
-        padding: 10px; /* Reduce padding */
-    }
-
-    .logo-container img {
-        width: 150px; /* Reduce the logo size */
+        padding: 10px;
     }
 
     nav ul {
-        gap: 5px; /* Reduce spacing between links */
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .search-bar input[type="text"] {
-        width: 100%; /* Make the input field full width */
-    }
-
-    /* Start Section */
-    .hp-text-container h1 {
-        font-size: 1.5rem; /* Further reduce the font size */
+    /* Hero Section */
+    .hp-animated-heading {
+        font-size: 2rem;
     }
 
     .hp-start-paragraph {
-        font-size: 0.9rem; /* Further reduce the font size */
+        font-size: 0.9rem;
     }
 
     .hp-view-courses-btn {
-        font-size: 0.9rem; /* Further reduce the button font size */
-        padding: 6px 12px; /* Adjust button padding */
-    }
-
-    /* Why Choose Section */
-    .hp-why-container .hp-image-left img {
-        width: 100%; /* Make the image take full width */
-    }
-
-    .hp-why-container .hp-text {
-        font-size: 0.9rem; /* Further reduce the font size */
+        font-size: 0.8rem;
+        padding: 6px 12px;
     }
 
     /* Features Section */
-    .hp-feature img {
-        width: 60px; /* Reduce the image size */
-    }
-
-    .hp-feature h3 {
-        font-size: 1rem; /* Reduce the font size */
-    }
-
-    .hp-feature p {
-        font-size: 0.8rem; /* Reduce the font size */
+    .hp-feature {
+        width: 100%;
     }
 
     /* Popular Courses Section */
-    .hp-course-card img {
-        max-width: 100%; /* Make the image take full width */
-    }
-
-    .hp-course-card h3 {
-        font-size: 0.9rem; /* Further reduce the font size */
-    }
-
-    .hp-course-card p {
-        font-size: 0.8rem; /* Further reduce the font size */
-    }
-
-    .hp-start-learning-button {
-        font-size: 0.8rem; /* Further reduce the button font size */
-        padding: 4px 8px; /* Adjust button padding */
+    .hp-course-card {
+        width: 100%;
     }
 
     /* Instructor Section */
-    .hp-image-container img {
-        width: 100%; /* Make the image take full width */
+    .hp-instructor-container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hp-text-container h2 {
-        font-size: 1.2rem; /* Further reduce the font size */
-    }
-
-    .hp-text-container p {
-        font-size: 0.9rem; /* Further reduce the font size */
-    }
-
-    button {
-        font-size: 0.9rem; /* Further reduce the button font size */
-        padding: 6px 12px; /* Adjust button padding */
+    .hp-instructor-container img {
+        max-width: 100%;
     }
 
     /* Categories Section */
-    .hp-category-card h3 {
-        font-size: 1rem; /* Reduce the font size */
+    .hp-categories {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .hp-category-card p {
-        font-size: 0.8rem; /* Reduce the font size */
+    .hp-category-card {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar-container {
+        padding: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Hero Section */
+    .hp-animated-heading {
+        font-size: 1.8rem;
+    }
+
+    .hp-start-paragraph {
+        font-size: 0.8rem;
+    }
+
+    .hp-view-courses-btn {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    /* Features Section */
+    .hp-feature {
+        width: 100%;
+    }
+
+    /* Popular Courses Section */
+    .hp-course-card {
+        width: 100%;
+    }
+
+    /* Instructor Section */
+    .hp-instructor-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hp-instructor-container img {
+        max-width: 100%;
+    }
+
+    /* Categories Section */
+    .hp-categories {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hp-category-card {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 10px;
+    }
+}
+/*responsive design for contact page*/
+/* Responsive Design for Pages */
+@media (max-width: 1024px) {
+    .c-container {
+        flex-direction: column; /* Stack help and form sections vertically */
+        gap: 20px; /* Add spacing between sections */
+    }
+
+    .c-help-section,
+    .c-form-section {
+        max-width: 100%; /* Allow sections to take full width */
+    }
+
+    .c-contact-section {
+        flex-direction: column; /* Stack contact boxes vertically */
+        gap: 20px; /* Add spacing between boxes */
+    }
+
+    .c-contact-box {
+        max-width: 100%; /* Allow contact boxes to take full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .c-first-section h1 {
+        font-size: 2rem; /* Reduce heading size */
+    }
+
+    .c-first-section p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .c-help-title {
+        font-size: 1.5rem; /* Adjust help section title size */
+    }
+
+    .c-help-list li {
+        font-size: 0.9rem; /* Adjust help list font size */
+    }
+
+    .c-input,
+    .c-textarea {
+        font-size: 0.9rem; /* Adjust input and textarea font size */
+    }
+
+    .c-submit-btn {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 8px; /* Adjust button padding */
+    }
+
+    .c-contact-box h3 {
+        font-size: 1rem; /* Adjust contact box heading size */
+    }
+
+    .c-contact-box p {
+        font-size: 0.9rem; /* Adjust contact box paragraph size */
+    }
+}
+
+@media (max-width: 480px) {
+    .c-first-section h1 {
+        font-size: 1.8rem; /* Further reduce heading size */
+    }
+
+    .c-first-section p {
+        font-size: 0.8rem; /* Adjust paragraph font size */
+    }
+
+    .c-help-title {
+        font-size: 1.2rem; /* Further reduce help section title size */
+    }
+
+    .c-help-list li {
+        font-size: 0.8rem; /* Further reduce help list font size */
+    }
+
+    .c-input,
+    .c-textarea {
+        font-size: 0.8rem; /* Further reduce input and textarea font size */
+    }
+
+    .c-submit-btn {
+        font-size: 0.8rem; /* Further reduce button font size */
+        padding: 6px; /* Adjust button padding */
+    }
+
+    .c-contact-box h3 {
+        font-size: 0.9rem; /* Further reduce contact box heading size */
+    }
+
+    .c-contact-box p {
+        font-size: 0.8rem; /* Further reduce contact box paragraph size */
+    }
+
+    .c-contact-section {
+        padding: 20px; /* Reduce padding for smaller screens */
     }
 }
