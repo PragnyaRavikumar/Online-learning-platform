@@ -262,3 +262,27 @@ function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
+function animateCounters() {
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        const duration = 2000; // Duration in milliseconds
+        const increment = target / (duration / 50); // Increment value
+
+        let current = 0;
+
+        const updateCounter = () => {
+            current += increment;
+            if (current >= target) {
+                counter.textContent = target; // Ensure it doesn't exceed the target
+            } else {
+                counter.textContent = Math.ceil(current);
+                setTimeout(updateCounter, 50); // Update every 50ms
+            }
+        };
+
+        updateCounter();
+    });
+}
+
+document.addEventListener("DOMContentLoaded", animateCounters);
